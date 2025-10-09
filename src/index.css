@@ -41,7 +41,9 @@ All colors MUST be HSL.
     --radius: 1rem;
     
     --gradient-hero: linear-gradient(135deg, hsl(271 81% 56% / 0.1), hsl(282 83% 65% / 0.15));
+    --gradient-glow: linear-gradient(135deg, hsl(271 81% 56% / 0.4), hsl(282 83% 65% / 0.6));
     --shadow-elegant: 0 10px 40px -10px hsl(271 81% 56% / 0.2);
+    --shadow-glow: 0 0 60px hsl(271 81% 56% / 0.3);
 
     --sidebar-background: 0 0% 98%;
 
@@ -92,7 +94,9 @@ All colors MUST be HSL.
     --ring: 271 81% 56%;
     
     --gradient-hero: linear-gradient(135deg, hsl(271 81% 56% / 0.15), hsl(282 83% 65% / 0.2));
+    --gradient-glow: linear-gradient(135deg, hsl(271 81% 56% / 0.5), hsl(282 83% 65% / 0.7));
     --shadow-elegant: 0 10px 40px -10px hsl(271 81% 56% / 0.3);
+    --shadow-glow: 0 0 60px hsl(271 81% 56% / 0.4);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
