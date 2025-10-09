@@ -1,4 +1,4 @@
-import { Download, Sparkles } from "lucide-react";
+import { Download, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navigation = () => {
@@ -17,20 +17,25 @@ const Navigation = () => {
             </div>
           </div>
 
-          {/* Attractive CTA Button */}
-          <div className="flex items-center gap-4">
-            <div className="hidden md:flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
-              <Sparkles className="w-4 h-4 text-primary animate-pulse" />
-              <span className="text-sm font-medium text-foreground">Open to opportunities</span>
-            </div>
-            
+          {/* Action Buttons */}
+          <div className="flex items-center gap-3">
             <Button 
               className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
               asChild
             >
-              <a href="#contact" className="flex items-center gap-2">
+              <a href="#resume" className="flex items-center gap-2">
                 <Download className="w-4 h-4" />
                 <span className="hidden sm:inline">Resume</span>
+              </a>
+            </Button>
+
+            <Button 
+              className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+              asChild
+            >
+              <a href="#contact" className="flex items-center gap-2">
+                <Mail className="w-4 h-4" />
+                <span className="hidden sm:inline">Contact</span>
               </a>
             </Button>
           </div>
