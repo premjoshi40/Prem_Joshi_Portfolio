@@ -1,4 +1,4 @@
-import premPhoto from "@/assets/prem-photo-new.jpg";
+import premPhoto from "@/assets/prem-sunset-photo.jpg";
 
 const Hero = () => {
   const quickLinks = [
