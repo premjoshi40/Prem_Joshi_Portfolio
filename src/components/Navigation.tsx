@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Package, Github } from "lucide-react";
+import { Package, Github, Linkedin } from "lucide-react";
 
 const Navigation = () => {
   const navItems = [
@@ -47,8 +47,9 @@ const Navigation = () => {
             </div>
 
             {/* CTA Button */}
-            <Button variant="default" size="lg" className="rounded-full">
-              Contact
+            <Button variant="default" size="lg" className="rounded-full flex items-center gap-2">
+              <Linkedin size={18} />
+              LinkedIn
             </Button>
           </div>
         </div>

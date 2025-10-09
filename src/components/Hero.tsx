@@ -4,7 +4,7 @@ const Hero = () => {
   const stats = [
     { value: "6+", label: "Years Experience" },
     { value: "5", label: "Products Launched" },
-    { value: "45", label: "Happy Clients" },
+    { value: "15+", label: "Happy Clients" },
   ];
 
   return (
@@ -34,7 +34,7 @@ const Hero = () => {
             </div>
 
             <Button variant="hero" size="lg" className="rounded-full text-base px-8">
-              Let's Connect!
+              Resume
             </Button>
 
             {/* Stats */}
