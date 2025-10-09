@@ -29,10 +29,11 @@ const Hero = () => {
           {/* Right: Info Section */}
           <div className="space-y-8">
             <div>
-              <p className="text-2xl text-muted-foreground mb-2">Hello</p>
-              <h1 className="text-5xl lg:text-6xl font-bold text-foreground mb-6">
+              <p className="text-lg text-muted-foreground mb-1">Hello</p>
+              <h1 className="text-5xl lg:text-6xl font-bold text-foreground mb-2">
                 Prem Joshi
               </h1>
+              <p className="text-xl text-muted-foreground mb-6">Building product with passion</p>
               
               <div className="space-y-4">
                 <h2 className="text-2xl font-semibold text-foreground">

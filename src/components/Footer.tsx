@@ -1,10 +1,10 @@
-import { Mail, Linkedin } from "lucide-react";
+import { Mail, Github, Linkedin } from "lucide-react";
 
 const Footer = () => {
   return (
     <footer className="py-12 px-6 lg:px-12 border-t border-border bg-background">
       <div className="container mx-auto max-w-6xl">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Email */}
           <div>
             <h3 className="text-sm font-semibold text-foreground mb-2">Email</h3>
@@ -15,6 +15,15 @@ const Footer = () => {
               <Mail size={16} />
               prem.joshi@example.com
             </a>
+          </div>
+
+          {/* GitHub */}
+          <div>
+            <h3 className="text-sm font-semibold text-foreground mb-2">GitHub</h3>
+            <div className="text-sm text-muted-foreground flex items-center gap-2">
+              <Github size={16} />
+              Coming soon
+            </div>
           </div>
 
           {/* LinkedIn */}
@@ -30,12 +39,6 @@ const Footer = () => {
               www.linkedin.com/in/premrjoshi
             </a>
           </div>
-        </div>
-
-        <div className="mt-8 pt-8 border-t border-border text-center">
-          <p className="text-xs text-muted-foreground">
-            © 2025 Prem Joshi. Built with passion in New Jersey.
-          </p>
         </div>
       </div>
     </footer>
