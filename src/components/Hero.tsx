@@ -2,8 +2,8 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   const stats = [
-    { value: "8+", label: "Years Experience" },
-    { value: "150+", label: "Products Launched" },
+    { value: "6+", label: "Years Experience" },
+    { value: "5", label: "Products Launched" },
     { value: "45", label: "Happy Clients" },
   ];
 

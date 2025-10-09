@@ -15,13 +15,8 @@ const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-card/80 backdrop-blur-lg border-b border-border">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <a href="#home" className="flex items-center gap-3 group">
-            <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold text-xl transition-transform group-hover:scale-110">
-              P
-            </div>
-            <span className="text-xl font-bold text-foreground hidden sm:block">Portfolio</span>
-          </a>
+          {/* Empty space for layout */}
+          <div></div>
 
           {/* Navigation Links */}
           <div className="hidden lg:flex items-center gap-8">
