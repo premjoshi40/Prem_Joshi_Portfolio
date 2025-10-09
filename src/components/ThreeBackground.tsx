@@ -1,155 +1,109 @@
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Float, Text3D, Center } from '@react-three/drei';
-import { useRef } from 'react';
+import { Canvas, useFrame } from '@react-three/fiber';
+import { useRef, useMemo } from 'react';
 import * as THREE from 'three';
 
-// Cloud shape
-const CloudShape = ({ position, color }: { position: [number, number, number], color: string }) => {
-  return (
-    <Float speed={1.5} rotationIntensity={0.3} floatIntensity={2}>
-      <group position={position}>
-        <mesh position={[0, 0, 0]}>
-          <sphereGeometry args={[0.6, 16, 16]} />
-          <meshStandardMaterial color={color} metalness={0.3} roughness={0.4} />
-        </mesh>
-        <mesh position={[0.5, 0.2, 0]}>
-          <sphereGeometry args={[0.5, 16, 16]} />
-          <meshStandardMaterial color={color} metalness={0.3} roughness={0.4} />
-        </mesh>
-        <mesh position={[-0.4, 0.15, 0]}>
-          <sphereGeometry args={[0.4, 16, 16]} />
-          <meshStandardMaterial color={color} metalness={0.3} roughness={0.4} />
-        </mesh>
-        <mesh position={[0.2, 0.4, 0]}>
-          <sphereGeometry args={[0.45, 16, 16]} />
-          <meshStandardMaterial color={color} metalness={0.3} roughness={0.4} />
-        </mesh>
-      </group>
-    </Float>
-  );
-};
+const NetworkNodes = () => {
+  const groupRef = useRef<THREE.Group>(null);
+  
+  // Create network nodes and connections
+  const { nodes, lines } = useMemo(() => {
+    const nodePositions: [number, number, number][] = [
+      [-6, 2, -5],
+      [-4, 3, -4],
+      [-2, 2.5, -5],
+      [0, 3.5, -4],
+      [2, 2.8, -5],
+      [4, 3.2, -4],
+      [6, 2.5, -5],
+      [-5, 1, -4],
+      [-3, 1.5, -5],
+      [-1, 0.8, -4],
+      [1, 1.3, -5],
+      [3, 0.9, -4],
+      [5, 1.6, -5],
+    ];
 
-// Code bracket shape
-const BracketShape = ({ position, color }: { position: [number, number, number], color: string }) => {
-  return (
-    <Float speed={1.2} rotationIntensity={0.5} floatIntensity={1.5}>
-      <group position={position} rotation={[0, 0, 0]}>
-        <mesh>
-          <boxGeometry args={[0.2, 1.5, 0.2]} />
-          <meshStandardMaterial color={color} metalness={0.8} roughness={0.2} />
-        </mesh>
-        <mesh position={[0.3, 0.6, 0]}>
-          <boxGeometry args={[0.6, 0.2, 0.2]} />
-          <meshStandardMaterial color={color} metalness={0.8} roughness={0.2} />
-        </mesh>
-        <mesh position={[0.3, -0.6, 0]}>
-          <boxGeometry args={[0.6, 0.2, 0.2]} />
-          <meshStandardMaterial color={color} metalness={0.8} roughness={0.2} />
-        </mesh>
-      </group>
-    </Float>
-  );
-};
+    // Create connections between nearby nodes
+    const connections: [number, number][] = [];
+    for (let i = 0; i < nodePositions.length; i++) {
+      for (let j = i + 1; j < nodePositions.length; j++) {
+        const dist = Math.sqrt(
+          Math.pow(nodePositions[i][0] - nodePositions[j][0], 2) +
+          Math.pow(nodePositions[i][1] - nodePositions[j][1], 2) +
+          Math.pow(nodePositions[i][2] - nodePositions[j][2], 2)
+        );
+        if (dist < 3.5) {
+          connections.push([i, j]);
+        }
+      }
+    }
 
-// AI Neural Network Node
-const AINode = ({ position, color }: { position: [number, number, number], color: string }) => {
-  return (
-    <Float speed={1} rotationIntensity={0.4} floatIntensity={1.8}>
-      <group position={position}>
-        <mesh>
-          <octahedronGeometry args={[0.6, 0]} />
-          <meshStandardMaterial color={color} metalness={0.9} roughness={0.1} wireframe />
-        </mesh>
-        <mesh>
-          <octahedronGeometry args={[0.4, 0]} />
-          <meshStandardMaterial color={color} metalness={0.9} roughness={0.1} />
-        </mesh>
-      </group>
-    </Float>
-  );
-};
+    return { nodes: nodePositions, lines: connections };
+  }, []);
 
-// Tag/Hash symbol
-const TagShape = ({ position, color }: { position: [number, number, number], color: string }) => {
-  return (
-    <Float speed={1.3} rotationIntensity={0.6} floatIntensity={1.6}>
-      <group position={position}>
-        <mesh position={[-0.3, 0, 0]} rotation={[0, 0, Math.PI / 8]}>
-          <boxGeometry args={[0.15, 1.2, 0.15]} />
-          <meshStandardMaterial color={color} metalness={0.7} roughness={0.3} />
-        </mesh>
-        <mesh position={[0.3, 0, 0]} rotation={[0, 0, Math.PI / 8]}>
-          <boxGeometry args={[0.15, 1.2, 0.15]} />
-          <meshStandardMaterial color={color} metalness={0.7} roughness={0.3} />
-        </mesh>
-        <mesh position={[0, 0.35, 0]}>
-          <boxGeometry args={[1, 0.15, 0.15]} />
-          <meshStandardMaterial color={color} metalness={0.7} roughness={0.3} />
-        </mesh>
-        <mesh position={[0, -0.35, 0]}>
-          <boxGeometry args={[1, 0.15, 0.15]} />
-          <meshStandardMaterial color={color} metalness={0.7} roughness={0.3} />
-        </mesh>
-      </group>
-    </Float>
-  );
-};
+  useFrame((state) => {
+    if (groupRef.current) {
+      groupRef.current.rotation.y = state.clock.elapsedTime * 0.05;
+    }
+  });
 
-// Database/Server shape
-const DatabaseShape = ({ position, color }: { position: [number, number, number], color: string }) => {
   return (
-    <Float speed={1.1} rotationIntensity={0.3} floatIntensity={1.4}>
-      <group position={position}>
-        <mesh position={[0, 0.4, 0]}>
-          <cylinderGeometry args={[0.5, 0.5, 0.2, 32]} />
-          <meshStandardMaterial color={color} metalness={0.6} roughness={0.4} />
+    <group ref={groupRef}>
+      {/* Render nodes */}
+      {nodes.map((position, index) => (
+        <mesh key={`node-${index}`} position={position}>
+          <sphereGeometry args={[0.08, 8, 8]} />
+          <meshStandardMaterial 
+            color="#7DD3E8" 
+            metalness={0.8} 
+            roughness={0.2}
+            emissive="#7DD3E8"
+            emissiveIntensity={0.3}
+          />
         </mesh>
-        <mesh position={[0, 0, 0]}>
-          <cylinderGeometry args={[0.5, 0.5, 0.6, 32]} />
-          <meshStandardMaterial color={color} metalness={0.6} roughness={0.4} />
-        </mesh>
-        <mesh position={[0, -0.4, 0]}>
-          <cylinderGeometry args={[0.5, 0.5, 0.2, 32]} />
-          <meshStandardMaterial color={color} metalness={0.6} roughness={0.4} />
-        </mesh>
-      </group>
-    </Float>
+      ))}
+      
+      {/* Render connections */}
+      {lines.map(([start, end], index) => {
+        const startPos = new THREE.Vector3(...nodes[start]);
+        const endPos = new THREE.Vector3(...nodes[end]);
+        const direction = new THREE.Vector3().subVectors(endPos, startPos);
+        const length = direction.length();
+        const midpoint = new THREE.Vector3().addVectors(startPos, endPos).multiplyScalar(0.5);
+
+        return (
+          <mesh key={`line-${index}`} position={midpoint}>
+            <cylinderGeometry args={[0.01, 0.01, length, 4]} />
+            <meshStandardMaterial 
+              color="#7DD3E8" 
+              transparent 
+              opacity={0.3}
+              metalness={0.5}
+            />
+          </mesh>
+        );
+      })}
+    </group>
   );
 };
 
 const Scene = () => {
   return (
     <>
-      <ambientLight intensity={0.6} />
-      <directionalLight position={[10, 10, 5]} intensity={1.2} />
-      <pointLight position={[-10, -10, -5]} intensity={0.7} color="#7DD3E8" />
-      <pointLight position={[10, -5, -5]} intensity={0.5} color="#F7941D" />
+      <ambientLight intensity={0.4} />
+      <directionalLight position={[5, 5, 5]} intensity={0.8} />
+      <pointLight position={[0, 3, -2]} intensity={0.5} color="#7DD3E8" />
       
-      {/* Tech-themed floating shapes */}
-      <CloudShape position={[-4, 2, -3]} color="#7DD3E8" />
-      <BracketShape position={[3.5, 1, -2]} color="#F7941D" />
-      <AINode position={[-2, -1.5, -4]} color="#C4D82E" />
-      <TagShape position={[1, 3, -3]} color="#BFBFBF" />
-      <DatabaseShape position={[4, -1, -4]} color="#7DD3E8" />
-      <BracketShape position={[-3.5, -2, -2]} color="#C4D82E" />
-      
-      <OrbitControls 
-        enableZoom={false} 
-        enablePan={false}
-        autoRotate
-        autoRotateSpeed={0.3}
-        maxPolarAngle={Math.PI / 2}
-        minPolarAngle={Math.PI / 3}
-      />
+      <NetworkNodes />
     </>
   );
 };
 
 const ThreeBackground = () => {
   return (
-    <div className="absolute inset-0 opacity-30">
+    <div className="absolute top-0 left-0 right-0 h-[400px] opacity-40 pointer-events-none">
       <Canvas
-        camera={{ position: [0, 0, 8], fov: 50 }}
+        camera={{ position: [0, 2, 3], fov: 60 }}
         style={{ background: 'transparent' }}
       >
         <Scene />
