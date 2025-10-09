@@ -2,8 +2,8 @@ import premPhoto from "@/assets/prem-sunset-photo.jpg";
 
 const Hero = () => {
   const quickLinks = [
-    { label: "Resume", href: "#resume", color: "bg-[#C4D82E] hover:bg-[#B5C929]" },
     { label: "Products", href: "#products", color: "bg-[#F7941D] hover:bg-[#E8850E]" },
+    { label: "Certification", href: "#certification", color: "bg-[#C4D82E] hover:bg-[#B5C929]" },
     { label: "Portfolio", href: "#portfolio", color: "bg-[#7DD3E8] hover:bg-[#6EC4D9]" },
     { label: "Contact", href: "#contact", color: "bg-[#BFBFBF] hover:bg-[#B0B0B0]" },
   ];
