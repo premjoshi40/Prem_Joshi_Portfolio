@@ -5,7 +5,6 @@ const Hero = () => {
     { label: "Products", href: "#products", color: "bg-[#F7941D] hover:bg-[#E8850E]" },
     { label: "Certification", href: "#certification", color: "bg-[#C4D82E] hover:bg-[#B5C929]" },
     { label: "Portfolio", href: "#portfolio", color: "bg-[#7DD3E8] hover:bg-[#6EC4D9]" },
-    { label: "Contact", href: "#contact", color: "bg-[#BFBFBF] hover:bg-[#B0B0B0]" },
   ];
 
   return (
@@ -50,11 +49,12 @@ const Hero = () => {
 
             {/* Quick Action Buttons */}
             <div className="flex flex-wrap gap-4 pt-4">
-              {quickLinks.map((link) => (
+              {quickLinks.map((link, index) => (
                 <a
                   key={link.label}
                   href={link.href}
-                  className={`${link.color} text-white font-semibold px-8 py-4 rounded-full transition-all duration-200 shadow-md hover:shadow-lg transform hover:scale-105`}
+                  className={`${link.color} text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 shadow-md hover:shadow-xl transform hover:scale-110 hover:-translate-y-1 animate-fade-in`}
+                  style={{ animationDelay: `${index * 100}ms` }}
                 >
                   {link.label}
                 </a>
