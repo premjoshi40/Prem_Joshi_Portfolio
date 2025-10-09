@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Package, Github } from "lucide-react";
 
 const Navigation = () => {
   const navItems = [
@@ -35,10 +36,26 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <Button variant="default" size="lg" className="rounded-full">
-            Contact
-          </Button>
+          {/* Right Section - Task Bar & CTA */}
+          <div className="flex items-center gap-4">
+            {/* Task Bar */}
+            <div className="hidden md:flex items-center gap-3">
+              <div className="flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20 hover:bg-primary/20 transition-colors cursor-pointer">
+                <Package size={18} className="text-primary" />
+                <span className="text-sm font-medium text-primary">Product Built</span>
+              </div>
+              
+              <div className="flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20 hover:bg-primary/20 transition-colors cursor-pointer">
+                <Github size={18} className="text-primary" />
+                <span className="text-sm font-medium text-primary">Git</span>
+              </div>
+            </div>
+
+            {/* CTA Button */}
+            <Button variant="default" size="lg" className="rounded-full">
+              Contact
+            </Button>
+          </div>
         </div>
       </div>
     </nav>
