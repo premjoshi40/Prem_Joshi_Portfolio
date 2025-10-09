@@ -1,5 +1,4 @@
 import premPhoto from "@/assets/prem-sunset-photo.jpg";
-import ThreeBackground from "./ThreeBackground";
 
 const Hero = () => {
   const quickLinks = [
@@ -10,9 +9,8 @@ const Hero = () => {
   ];
 
   return (
-    <section id="home" className="relative min-h-screen pt-24 pb-16 px-6 lg:px-12 bg-background overflow-hidden">
-      <ThreeBackground />
-      <div className="container mx-auto max-w-6xl relative z-10">
+    <section id="home" className="min-h-screen pt-24 pb-16 px-6 lg:px-12 bg-background">
+      <div className="container mx-auto max-w-6xl">
         {/* Main Content Grid */}
         <div className="grid lg:grid-cols-[400px_1fr] gap-12 lg:gap-16 items-start pt-12">
           {/* Left: Profile Photo */}
