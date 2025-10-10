@@ -55,11 +55,11 @@ const CertificationModal = ({ open, onOpenChange }: CertificationModalProps) => 
             >
               {/* Badge Image */}
               <div className="flex justify-center mb-4">
-                <div className="relative w-40 h-40 overflow-hidden rounded-full bg-muted/50 p-2 group-hover:scale-110 transition-transform duration-300">
+                <div className="relative w-40 h-40 rounded-full bg-muted/50 p-3 group-hover:scale-110 transition-transform duration-300">
                   <img
                     src={cert.image}
                     alt={cert.title}
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-contain object-center"
                   />
                 </div>
               </div>
