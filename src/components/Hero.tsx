@@ -2,12 +2,14 @@ import premPhoto from "@/assets/prem-sunset-photo.jpg";
 import { Package, Award, Briefcase } from "lucide-react";
 import { useState } from "react";
 import CertificationModal from "@/components/CertificationModal";
+import ProductsModal from "@/components/ProductsModal";
 
 const Hero = () => {
   const [certModalOpen, setCertModalOpen] = useState(false);
+  const [productsModalOpen, setProductsModalOpen] = useState(false);
   const quickLinks = [
-    { label: "Products", href: "#products", color: "bg-[#F7941D] hover:bg-[#E8850E]", icon: Package, type: "link" },
-    { label: "Certification", color: "bg-[#C4D82E] hover:bg-[#B5C929]", icon: Award, type: "modal" },
+    { label: "Products", color: "bg-[#F7941D] hover:bg-[#E8850E]", icon: Package, type: "modal", onClick: () => setProductsModalOpen(true) },
+    { label: "Certification", color: "bg-[#C4D82E] hover:bg-[#B5C929]", icon: Award, type: "modal", onClick: () => setCertModalOpen(true) },
     { label: "Portfolio", href: "#portfolio", color: "bg-[#7DD3E8] hover:bg-[#6EC4D9]", icon: Briefcase, type: "link" },
   ];
 
@@ -60,7 +62,7 @@ const Hero = () => {
                   return (
                     <button
                       key={link.label}
-                      onClick={() => setCertModalOpen(true)}
+                      onClick={link.onClick}
                       className={`${link.color} text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 shadow-md hover:shadow-xl transform hover:scale-110 hover:-translate-y-1 animate-fade-in flex items-center gap-2 cursor-pointer`}
                       style={{ animationDelay: `${index * 100}ms` }}
                     >
@@ -104,6 +106,7 @@ const Hero = () => {
       </div>
       
       <CertificationModal open={certModalOpen} onOpenChange={setCertModalOpen} />
+      <ProductsModal open={productsModalOpen} onOpenChange={setProductsModalOpen} />
     </section>
   );
 };
