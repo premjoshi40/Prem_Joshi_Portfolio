@@ -15,44 +15,67 @@ const ProductsModal = ({ open, onOpenChange }: ProductsModalProps) => {
   const products = [
     {
       name: "Fridge Roaster",
-      description: "An innovative kitchen companion",
+      description: "An innovative kitchen companion that brings humor to your fridge",
       url: "https://premjoshi40.github.io/Fridge_Roast/",
+      gradient: "from-orange-500 to-red-500",
+      icon: "🍔",
     },
     {
       name: "Amuse",
-      description: "Interactive product prototype",
+      description: "Interactive product prototype with engaging user experiences",
       url: "https://marvelapp.com/prototype/5fhb9ah/screen/83226649",
+      gradient: "from-purple-500 to-pink-500",
+      icon: "🎨",
     },
   ];
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
+      <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto bg-gradient-to-br from-background via-background to-accent/10">
         <DialogHeader>
-          <DialogTitle className="text-3xl font-bold text-center mb-6">
+          <DialogTitle className="text-3xl font-bold text-center mb-2 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
             My Products
           </DialogTitle>
+          <p className="text-center text-muted-foreground text-sm">Explore my innovative creations</p>
         </DialogHeader>
         
-        <div className="grid gap-6">
+        <div className="grid gap-6 mt-6">
           {products.map((product, index) => (
             <a
               key={product.name}
               href={product.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group p-6 rounded-lg border border-border bg-card hover:bg-accent/50 transition-all duration-300 hover:shadow-lg hover:scale-[1.02] animate-fade-in flex items-center justify-between"
+              className="group relative overflow-hidden p-6 rounded-xl border-2 border-border bg-card hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20 hover:scale-[1.03] animate-fade-in"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
-                  {product.name}
-                </h3>
-                <p className="text-muted-foreground">
-                  {product.description}
-                </p>
+              {/* Gradient background on hover */}
+              <div className={`absolute inset-0 bg-gradient-to-r ${product.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
+              
+              {/* Icon badge */}
+              <div className="absolute -top-2 -right-2 w-16 h-16 flex items-center justify-center text-4xl transform group-hover:scale-125 group-hover:rotate-12 transition-transform duration-500">
+                {product.icon}
               </div>
-              <ExternalLink className="w-6 h-6 text-muted-foreground group-hover:text-primary transition-colors" />
+              
+              <div className="relative flex items-center justify-between">
+                <div className="flex-1 pr-4">
+                  <h3 className="text-2xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
+                    {product.name}
+                  </h3>
+                  <p className="text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
+                    {product.description}
+                  </p>
+                </div>
+                
+                <div className="flex-shrink-0">
+                  <div className={`p-3 rounded-full bg-gradient-to-r ${product.gradient} group-hover:scale-110 transition-transform duration-300`}>
+                    <ExternalLink className="w-6 h-6 text-white" />
+                  </div>
+                </div>
+              </div>
+              
+              {/* Animated border effect */}
+              <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent w-0 group-hover:w-full transition-all duration-500" />
             </a>
           ))}
         </div>
