@@ -1,11 +1,14 @@
 import premPhoto from "@/assets/prem-sunset-photo.jpg";
 import { Package, Award, Briefcase } from "lucide-react";
+import { useState } from "react";
+import CertificationModal from "@/components/CertificationModal";
 
 const Hero = () => {
+  const [certModalOpen, setCertModalOpen] = useState(false);
   const quickLinks = [
-    { label: "Products", href: "#products", color: "bg-[#F7941D] hover:bg-[#E8850E]", icon: Package },
-    { label: "Certification", href: "#certification", color: "bg-[#C4D82E] hover:bg-[#B5C929]", icon: Award },
-    { label: "Portfolio", href: "#portfolio", color: "bg-[#7DD3E8] hover:bg-[#6EC4D9]", icon: Briefcase },
+    { label: "Products", href: "#products", color: "bg-[#F7941D] hover:bg-[#E8850E]", icon: Package, type: "link" },
+    { label: "Certification", color: "bg-[#C4D82E] hover:bg-[#B5C929]", icon: Award, type: "modal" },
+    { label: "Portfolio", href: "#portfolio", color: "bg-[#7DD3E8] hover:bg-[#6EC4D9]", icon: Briefcase, type: "link" },
   ];
 
   return (
@@ -52,6 +55,21 @@ const Hero = () => {
             <div className="flex flex-wrap gap-4 pt-4">
               {quickLinks.map((link, index) => {
                 const Icon = link.icon;
+                
+                if (link.type === "modal") {
+                  return (
+                    <button
+                      key={link.label}
+                      onClick={() => setCertModalOpen(true)}
+                      className={`${link.color} text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 shadow-md hover:shadow-xl transform hover:scale-110 hover:-translate-y-1 animate-fade-in flex items-center gap-2 cursor-pointer`}
+                      style={{ animationDelay: `${index * 100}ms` }}
+                    >
+                      <Icon size={20} />
+                      {link.label}
+                    </button>
+                  );
+                }
+                
                 return (
                   <a
                     key={link.label}
@@ -84,6 +102,8 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      
+      <CertificationModal open={certModalOpen} onOpenChange={setCertModalOpen} />
     </section>
   );
 };
