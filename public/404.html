@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Redirecting…</title>
+    <meta http-equiv="refresh" content="0; url=/Prem_Joshi_Portfolio/" />
+    <link rel="canonical" href="/Prem_Joshi_Portfolio/" />
+  </head>
+  <body>
+    <noscript>
+      <a href="/Prem_Joshi_Portfolio/">Redirecting to the app…</a>
+    </noscript>
+    <script>
+      (function() {
+        var path = location.pathname.replace(/^\/|\/$/g, '');
+        var base = 'Prem_Joshi_Portfolio';
+        if (path.startsWith(base)) {
+          path = path.slice(base.length);
+        }
+        var newUrl = '/' + base + '/#/' + path.replace(/^\//, '') + (location.search || '') + (location.hash || '');
+        location.replace(newUrl);
+      })();
+    </script>
+  </body>
+</html>
