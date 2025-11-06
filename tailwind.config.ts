@@ -119,6 +119,14 @@ export default {
         "bounce-subtle": {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-10px)" }
+        },
+        "scroll-left": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" }
+        },
+        "scroll-right": {
+          "0%": { transform: "translateX(-50%)" },
+          "100%": { transform: "translateX(0)" }
         }
       },
       animation: {
@@ -135,7 +143,9 @@ export default {
         "spin-slow": "spin-slow 20s linear infinite",
         "pulse-scale": "pulse-scale 2s ease-in-out infinite",
         "shimmer": "shimmer 3s linear infinite",
-        "bounce-subtle": "bounce-subtle 2s ease-in-out infinite"
+        "bounce-subtle": "bounce-subtle 2s ease-in-out infinite",
+        "scroll-left": "scroll-left 20s linear infinite",
+        "scroll-right": "scroll-right 25s linear infinite"
       },
     },
   },

@@ -38,42 +38,79 @@ const CertificationsSection = () => {
           <p className="text-muted-foreground">Industry-recognized credentials and achievements</p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {certifications.map((cert, index) => (
-            <a
-              key={cert.title}
-              href={cert.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative overflow-hidden rounded-2xl border-2 border-border bg-card p-6 transition-all duration-300 hover:shadow-2xl hover:scale-105 hover:border-primary animate-fade-in"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              {/* Badge Image */}
-              <div className="flex justify-center mb-4">
-                <div className="relative w-32 h-32 rounded-full bg-muted/50 p-3 group-hover:scale-110 transition-transform duration-300">
-                  <img
-                    src={cert.image}
-                    alt={cert.title}
-                    className="w-full h-full object-contain object-center"
-                  />
+        <div className="relative overflow-hidden">
+          <div className="flex animate-scroll-right hover:[animation-play-state:paused]">
+            {/* First set of certifications */}
+            {certifications.map((cert, index) => (
+              <a
+                key={`${cert.title}-1`}
+                href={cert.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative overflow-hidden rounded-2xl border-2 border-border bg-card p-6 transition-all duration-300 hover:shadow-2xl hover:scale-105 hover:border-primary flex-shrink-0 w-[280px] mx-3"
+              >
+                {/* Badge Image */}
+                <div className="flex justify-center mb-4">
+                  <div className="relative w-32 h-32 rounded-full bg-muted/50 p-3 group-hover:scale-110 transition-transform duration-300">
+                    <img
+                      src={cert.image}
+                      alt={cert.title}
+                      className="w-full h-full object-contain object-center"
+                    />
+                  </div>
                 </div>
-              </div>
 
-              {/* Title */}
-              <h3 className="text-center font-semibold text-foreground text-sm mb-3 leading-tight min-h-[2.5rem]">
-                {cert.title}
-              </h3>
+                {/* Title */}
+                <h3 className="text-center font-semibold text-foreground text-sm mb-3 leading-tight min-h-[2.5rem]">
+                  {cert.title}
+                </h3>
 
-              {/* View Badge Link */}
-              <div className="flex items-center justify-center gap-2 text-primary text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span>View Badge</span>
-                <ExternalLink size={16} />
-              </div>
+                {/* View Badge Link */}
+                <div className="flex items-center justify-center gap-2 text-primary text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span>View Badge</span>
+                  <ExternalLink size={16} />
+                </div>
 
-              {/* Hover Effect Overlay */}
-              <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-            </a>
-          ))}
+                {/* Hover Effect Overlay */}
+                <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+              </a>
+            ))}
+            {/* Duplicate set for seamless loop */}
+            {certifications.map((cert, index) => (
+              <a
+                key={`${cert.title}-2`}
+                href={cert.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative overflow-hidden rounded-2xl border-2 border-border bg-card p-6 transition-all duration-300 hover:shadow-2xl hover:scale-105 hover:border-primary flex-shrink-0 w-[280px] mx-3"
+              >
+                {/* Badge Image */}
+                <div className="flex justify-center mb-4">
+                  <div className="relative w-32 h-32 rounded-full bg-muted/50 p-3 group-hover:scale-110 transition-transform duration-300">
+                    <img
+                      src={cert.image}
+                      alt={cert.title}
+                      className="w-full h-full object-contain object-center"
+                    />
+                  </div>
+                </div>
+
+                {/* Title */}
+                <h3 className="text-center font-semibold text-foreground text-sm mb-3 leading-tight min-h-[2.5rem]">
+                  {cert.title}
+                </h3>
+
+                {/* View Badge Link */}
+                <div className="flex items-center justify-center gap-2 text-primary text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span>View Badge</span>
+                  <ExternalLink size={16} />
+                </div>
+
+                {/* Hover Effect Overlay */}
+                <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+              </a>
+            ))}
+          </div>
         </div>
 
         <div className="text-center text-sm text-muted-foreground mt-8">

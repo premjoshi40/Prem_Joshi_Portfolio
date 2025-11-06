@@ -36,47 +36,89 @@ const ProductsSection = () => {
           <p className="text-muted-foreground">Explore my latest projects and innovations</p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-6">
-          {products.map((product, index) => (
-            <Link
-              key={product.name}
-              to={product.path}
-              className="group relative overflow-hidden rounded-2xl border border-border bg-card transition-all duration-500 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 animate-fade-in"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              {/* Gradient overlay on hover */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${product.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
-              
-              {/* Content */}
-              <div className="relative p-6 flex flex-col h-full">
-                {/* Icon */}
-                <div className="mb-4 flex items-center justify-center">
-                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${product.gradient} flex items-center justify-center text-3xl shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500`}>
-                    {product.icon}
+        <div className="relative overflow-hidden">
+          <div className="flex animate-scroll-left hover:[animation-play-state:paused]">
+            {/* First set of products */}
+            {products.map((product, index) => (
+              <Link
+                key={`${product.name}-1`}
+                to={product.path}
+                className="group relative overflow-hidden rounded-2xl border border-border bg-card transition-all duration-500 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 flex-shrink-0 w-[350px] mx-3"
+              >
+                {/* Gradient overlay on hover */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${product.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
+                
+                {/* Content */}
+                <div className="relative p-6 flex flex-col h-full">
+                  {/* Icon */}
+                  <div className="mb-4 flex items-center justify-center">
+                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${product.gradient} flex items-center justify-center text-3xl shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500`}>
+                      {product.icon}
+                    </div>
+                  </div>
+                  
+                  {/* Title */}
+                  <h3 className="text-xl font-bold text-foreground mb-3 text-center group-hover:text-primary transition-colors duration-300">
+                    {product.name}
+                  </h3>
+                  
+                  {/* Description */}
+                  <p className="text-sm text-muted-foreground text-center mb-4 flex-grow group-hover:text-foreground/90 transition-colors duration-300">
+                    {product.description}
+                  </p>
+                  
+                  {/* CTA Button */}
+                  <div className="flex items-center justify-center gap-2 text-primary font-semibold text-sm group-hover:gap-3 transition-all duration-300">
+                    <span>View Project</span>
+                    <ExternalLink className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
                   </div>
                 </div>
                 
-                {/* Title */}
-                <h3 className="text-xl font-bold text-foreground mb-3 text-center group-hover:text-primary transition-colors duration-300">
-                  {product.name}
-                </h3>
+                {/* Bottom accent line */}
+                <div className={`absolute bottom-0 left-0 h-1 bg-gradient-to-r ${product.gradient} w-0 group-hover:w-full transition-all duration-500`} />
+              </Link>
+            ))}
+            {/* Duplicate set for seamless loop */}
+            {products.map((product, index) => (
+              <Link
+                key={`${product.name}-2`}
+                to={product.path}
+                className="group relative overflow-hidden rounded-2xl border border-border bg-card transition-all duration-500 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 flex-shrink-0 w-[350px] mx-3"
+              >
+                {/* Gradient overlay on hover */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${product.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
                 
-                {/* Description */}
-                <p className="text-sm text-muted-foreground text-center mb-4 flex-grow group-hover:text-foreground/90 transition-colors duration-300">
-                  {product.description}
-                </p>
-                
-                {/* CTA Button */}
-                <div className="flex items-center justify-center gap-2 text-primary font-semibold text-sm group-hover:gap-3 transition-all duration-300">
-                  <span>View Project</span>
-                  <ExternalLink className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+                {/* Content */}
+                <div className="relative p-6 flex flex-col h-full">
+                  {/* Icon */}
+                  <div className="mb-4 flex items-center justify-center">
+                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${product.gradient} flex items-center justify-center text-3xl shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500`}>
+                      {product.icon}
+                    </div>
+                  </div>
+                  
+                  {/* Title */}
+                  <h3 className="text-xl font-bold text-foreground mb-3 text-center group-hover:text-primary transition-colors duration-300">
+                    {product.name}
+                  </h3>
+                  
+                  {/* Description */}
+                  <p className="text-sm text-muted-foreground text-center mb-4 flex-grow group-hover:text-foreground/90 transition-colors duration-300">
+                    {product.description}
+                  </p>
+                  
+                  {/* CTA Button */}
+                  <div className="flex items-center justify-center gap-2 text-primary font-semibold text-sm group-hover:gap-3 transition-all duration-300">
+                    <span>View Project</span>
+                    <ExternalLink className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+                  </div>
                 </div>
-              </div>
-              
-              {/* Bottom accent line */}
-              <div className={`absolute bottom-0 left-0 h-1 bg-gradient-to-r ${product.gradient} w-0 group-hover:w-full transition-all duration-500`} />
-            </Link>
-          ))}
+                
+                {/* Bottom accent line */}
+                <div className={`absolute bottom-0 left-0 h-1 bg-gradient-to-r ${product.gradient} w-0 group-hover:w-full transition-all duration-500`} />
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </section>
