@@ -31,10 +31,10 @@ const FridgeRoaster = () => {
               href="https://premjoshi40.github.io/Fridge_Roast/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-semibold"
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
             >
               View Live Demo
-              <ExternalLink size={18} />
+              <ExternalLink size={20} />
             </a>
           </div>
 
