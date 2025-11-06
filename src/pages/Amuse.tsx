@@ -27,15 +27,26 @@ const Amuse = () => {
             <p className="text-xl text-muted-foreground">
               Interactive product prototype with engaging user experiences
             </p>
-            <a
-              href="https://marvelapp.com/prototype/5fhb9ah/screen/83226649"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-semibold"
-            >
-              View Interactive Prototype
-              <ExternalLink size={18} />
-            </a>
+            <div className="flex flex-wrap gap-4">
+              <a
+                href="https://marvelapp.com/prototype/5fhb9ah/screen/83226649"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-semibold"
+              >
+                View Marvel Prototype
+                <ExternalLink size={18} />
+              </a>
+              <a
+                href="https://premjoshi40.github.io/Amuse/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-semibold"
+              >
+                View Live Demo
+                <ExternalLink size={18} />
+              </a>
+            </div>
           </div>
 
           {/* Product Overview */}
