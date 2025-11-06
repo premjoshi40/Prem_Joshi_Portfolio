@@ -20,10 +20,15 @@ const Footer = () => {
           {/* GitHub */}
           <div>
             <h3 className="text-sm font-semibold text-foreground mb-2">GitHub</h3>
-            <div className="text-sm text-muted-foreground flex items-center gap-2">
+            <a 
+              href="https://github.com/premjoshi40" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2"
+            >
               <Github size={16} />
-              Coming soon
-            </div>
+              github.com/premjoshi40
+            </a>
           </div>
 
           {/* LinkedIn */}
