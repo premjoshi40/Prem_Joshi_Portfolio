@@ -39,50 +39,54 @@ const ProductsModal = ({ open, onOpenChange }: ProductsModalProps) => {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto bg-gradient-to-br from-background via-background to-accent/10">
-        <DialogHeader>
-          <DialogTitle className="text-3xl font-bold text-center mb-2 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+      <DialogContent className="max-w-4xl max-h-[85vh] overflow-y-auto bg-background border-border">
+        <DialogHeader className="space-y-3 pb-6">
+          <DialogTitle className="text-4xl font-bold text-center bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent">
             My Products
           </DialogTitle>
-          <p className="text-center text-muted-foreground text-sm">Explore my innovative creations</p>
+          <p className="text-center text-muted-foreground">Explore my latest projects and innovations</p>
         </DialogHeader>
         
-        <div className="grid gap-6 mt-6">
+        <div className="grid md:grid-cols-3 gap-6">
           {products.map((product, index) => (
             <Link
               key={product.name}
               to={product.path}
               onClick={() => onOpenChange(false)}
-              className="group relative overflow-hidden p-6 rounded-xl border-2 border-border bg-card hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20 hover:scale-[1.03] animate-fade-in"
+              className="group relative overflow-hidden rounded-2xl border border-border bg-card transition-all duration-500 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 animate-fade-in"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              {/* Gradient background on hover */}
-              <div className={`absolute inset-0 bg-gradient-to-r ${product.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
+              {/* Gradient overlay on hover */}
+              <div className={`absolute inset-0 bg-gradient-to-br ${product.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
               
-              {/* Icon badge */}
-              <div className="absolute -top-2 -right-2 w-16 h-16 flex items-center justify-center text-4xl transform group-hover:scale-125 group-hover:rotate-12 transition-transform duration-500">
-                {product.icon}
-              </div>
-              
-              <div className="relative flex items-center justify-between">
-                <div className="flex-1 pr-4">
-                  <h3 className="text-2xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
-                    {product.name}
-                  </h3>
-                  <p className="text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
-                    {product.description}
-                  </p>
-                </div>
-                
-                <div className="flex-shrink-0">
-                  <div className={`p-3 rounded-full bg-gradient-to-r ${product.gradient} group-hover:scale-110 transition-transform duration-300`}>
-                    <ExternalLink className="w-6 h-6 text-white" />
+              {/* Content */}
+              <div className="relative p-6 flex flex-col h-full">
+                {/* Icon */}
+                <div className="mb-4 flex items-center justify-center">
+                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${product.gradient} flex items-center justify-center text-3xl shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500`}>
+                    {product.icon}
                   </div>
                 </div>
+                
+                {/* Title */}
+                <h3 className="text-xl font-bold text-foreground mb-3 text-center group-hover:text-primary transition-colors duration-300">
+                  {product.name}
+                </h3>
+                
+                {/* Description */}
+                <p className="text-sm text-muted-foreground text-center mb-4 flex-grow group-hover:text-foreground/90 transition-colors duration-300">
+                  {product.description}
+                </p>
+                
+                {/* CTA Button */}
+                <div className="flex items-center justify-center gap-2 text-primary font-semibold text-sm group-hover:gap-3 transition-all duration-300">
+                  <span>View Project</span>
+                  <ExternalLink className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+                </div>
               </div>
               
-              {/* Animated border effect */}
-              <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent w-0 group-hover:w-full transition-all duration-500" />
+              {/* Bottom accent line */}
+              <div className={`absolute bottom-0 left-0 h-1 bg-gradient-to-r ${product.gradient} w-0 group-hover:w-full transition-all duration-500`} />
             </Link>
           ))}
         </div>
