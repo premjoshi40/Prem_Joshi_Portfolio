@@ -15,11 +15,11 @@ interface ProductsModalProps {
 const ProductsModal = ({ open, onOpenChange }: ProductsModalProps) => {
   const products = [
     {
-      name: "Fridge Roaster",
-      description: "An innovative kitchen companion that brings humor to your fridge",
+      name: "Fridge Analyzer",
+      description: "Smart AI Feedback for Fridge Organization — Reduce waste, maximize freshness",
       path: "/products/fridge-roaster",
       gradient: "from-orange-500 to-red-500",
-      icon: "🍔",
+      icon: "🧊",
     },
     {
       name: "Amuse",
