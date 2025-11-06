@@ -30,10 +30,10 @@ const ProductsModal = ({ open, onOpenChange }: ProductsModalProps) => {
     },
     {
       name: "Auralis",
-      description: "Next-generation audio experience platform",
+      description: "Intelligent AI chatbot for seamless conversations and support",
       path: "/products/auralis",
       gradient: "from-blue-500 to-cyan-500",
-      icon: "🎵",
+      icon: "💬",
     },
   ];
 
