@@ -28,6 +28,13 @@ const ProductsModal = ({ open, onOpenChange }: ProductsModalProps) => {
       gradient: "from-purple-500 to-pink-500",
       icon: "🎨",
     },
+    {
+      name: "Auralis",
+      description: "Next-generation audio experience platform",
+      path: "/products/auralis",
+      gradient: "from-blue-500 to-cyan-500",
+      icon: "🎵",
+    },
   ];
 
   return (
