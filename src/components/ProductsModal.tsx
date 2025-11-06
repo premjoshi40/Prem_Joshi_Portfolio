@@ -5,6 +5,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface ProductsModalProps {
   open: boolean;
@@ -16,14 +17,14 @@ const ProductsModal = ({ open, onOpenChange }: ProductsModalProps) => {
     {
       name: "Fridge Roaster",
       description: "An innovative kitchen companion that brings humor to your fridge",
-      url: "https://premjoshi40.github.io/Fridge_Roast/",
+      path: "/products/fridge-roaster",
       gradient: "from-orange-500 to-red-500",
       icon: "🍔",
     },
     {
       name: "Amuse",
       description: "Interactive product prototype with engaging user experiences",
-      url: "https://marvelapp.com/prototype/5fhb9ah/screen/83226649",
+      path: "/products/amuse",
       gradient: "from-purple-500 to-pink-500",
       icon: "🎨",
     },
@@ -41,11 +42,10 @@ const ProductsModal = ({ open, onOpenChange }: ProductsModalProps) => {
         
         <div className="grid gap-6 mt-6">
           {products.map((product, index) => (
-            <a
+            <Link
               key={product.name}
-              href={product.url}
-              target="_blank"
-              rel="noopener noreferrer"
+              to={product.path}
+              onClick={() => onOpenChange(false)}
               className="group relative overflow-hidden p-6 rounded-xl border-2 border-border bg-card hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20 hover:scale-[1.03] animate-fade-in"
               style={{ animationDelay: `${index * 100}ms` }}
             >
@@ -76,7 +76,7 @@ const ProductsModal = ({ open, onOpenChange }: ProductsModalProps) => {
               
               {/* Animated border effect */}
               <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent w-0 group-hover:w-full transition-all duration-500" />
-            </a>
+            </Link>
           ))}
         </div>
       </DialogContent>
