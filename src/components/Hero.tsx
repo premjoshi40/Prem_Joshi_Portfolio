@@ -1,15 +1,17 @@
 import premPhoto from "@/assets/prem-sunset-photo.jpg";
 import { Package, Award } from "lucide-react";
-import { useState } from "react";
-import CertificationModal from "@/components/CertificationModal";
-import ProductsModal from "@/components/ProductsModal";
 
 const Hero = () => {
-  const [certModalOpen, setCertModalOpen] = useState(false);
-  const [productsModalOpen, setProductsModalOpen] = useState(false);
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   const quickLinks = [
-    { label: "Products", color: "bg-[#F7941D] hover:bg-[#E8850E]", icon: Package, type: "modal", onClick: () => setProductsModalOpen(true) },
-    { label: "Certification", color: "bg-[#C4D82E] hover:bg-[#B5C929]", icon: Award, type: "modal", onClick: () => setCertModalOpen(true) },
+    { label: "Products", color: "bg-[#F7941D] hover:bg-[#E8850E]", icon: Package, onClick: () => scrollToSection('products') },
+    { label: "Certification", color: "bg-[#C4D82E] hover:bg-[#B5C929]", icon: Award, onClick: () => scrollToSection('certifications') },
   ];
 
   return (
@@ -73,25 +75,7 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Stats Section */}
-        <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto lg:mx-0 mt-10 pt-8 border-t border-border">
-          <div className="text-center lg:text-left">
-            <div className="text-4xl font-bold text-foreground mb-2">6+</div>
-            <div className="text-sm text-muted-foreground">Years Experience</div>
-          </div>
-          <div className="text-center lg:text-left">
-            <div className="text-4xl font-bold text-foreground mb-2">5</div>
-            <div className="text-sm text-muted-foreground">Products Launched</div>
-          </div>
-          <div className="text-center lg:text-left">
-            <div className="text-4xl font-bold text-foreground mb-2">15+</div>
-            <div className="text-sm text-muted-foreground">Happy Clients</div>
-          </div>
-        </div>
       </div>
-      
-      <CertificationModal open={certModalOpen} onOpenChange={setCertModalOpen} />
-      <ProductsModal open={productsModalOpen} onOpenChange={setProductsModalOpen} />
     </section>
   );
 };
