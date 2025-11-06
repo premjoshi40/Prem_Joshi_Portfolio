@@ -39,6 +39,21 @@ const Hero = () => {
                   through data-driven decision making and cross-functional collaboration. 
                   I've successfully launched 5 products and worked with over 15 happy clients.
                 </p>
+                
+                <div className="pt-2">
+                  <button className="group inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all duration-300">
+                    <span>More About Me</span>
+                    <svg 
+                      xmlns="http://www.w3.org/2000/svg" 
+                      className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" 
+                      fill="none" 
+                      viewBox="0 0 24 24" 
+                      stroke="currentColor"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
