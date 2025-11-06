@@ -1,18 +1,6 @@
 import premPhoto from "@/assets/prem-sunset-photo.jpg";
-import { Package, Award } from "lucide-react";
 
 const Hero = () => {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
-
-  const quickLinks = [
-    { label: "Products", color: "bg-[#F7941D] hover:bg-[#E8850E]", icon: Package, onClick: () => scrollToSection('products') },
-    { label: "Certification", color: "bg-[#C4D82E] hover:bg-[#B5C929]", icon: Award, onClick: () => scrollToSection('certifications') },
-  ];
 
   return (
     <section id="home" className="min-h-screen pt-24 pb-16 px-6 lg:px-12 bg-background">
@@ -52,25 +40,6 @@ const Hero = () => {
                   I've successfully launched 5 products and worked with over 15 happy clients.
                 </p>
               </div>
-            </div>
-
-            {/* Quick Action Buttons */}
-            <div className="flex flex-wrap gap-4 pt-4">
-              {quickLinks.map((link, index) => {
-                const Icon = link.icon;
-                
-                return (
-                  <button
-                    key={link.label}
-                    onClick={link.onClick}
-                    className={`${link.color} text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 shadow-md hover:shadow-xl transform hover:scale-110 hover:-translate-y-1 animate-fade-in flex items-center gap-2 cursor-pointer`}
-                    style={{ animationDelay: `${index * 100}ms` }}
-                  >
-                    <Icon size={20} />
-                    {link.label}
-                  </button>
-                );
-              })}
             </div>
           </div>
         </div>
