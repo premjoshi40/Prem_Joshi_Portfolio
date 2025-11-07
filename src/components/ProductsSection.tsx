@@ -27,7 +27,7 @@ const ProductsSection = () => {
   ];
 
   return (
-    <section id="products" className="pt-4 pb-12 px-6 lg:px-12 bg-background">
+    <section id="products" className="pt-0 pb-12 px-6 lg:px-12 bg-background">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent mb-4">
