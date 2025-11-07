@@ -34,10 +34,7 @@ const Hero = () => {
                 </h2>
                 
                 <p className="text-base text-foreground/80 leading-relaxed max-w-xl">
-                  I'm a Product Manager based in New Jersey with 6+ years of experience. 
-                  I specialize in building innovative products that solve real user problems 
-                  through data-driven decision making and cross-functional collaboration. 
-                  I've successfully launched 5 products and worked with over 15 happy clients.
+                  Product Manager and builder with 6+ years of experience launching and scaling B2B SaaS, B2B2C, and cloud platform products. I'm passionate about solving hard problems, turning ideas into products that reach thousands of users, and driving measurable business impact. I thrive at the intersection of strategy and execution building at scale from concept to launch and beyond.
                 </p>
                 
                 <div className="pt-4">
