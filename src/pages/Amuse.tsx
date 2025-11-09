@@ -154,9 +154,9 @@ const Amuse = () => {
           <section className="space-y-4">
             <h2 className="text-3xl font-bold text-foreground">Customer Pain Point (Prioritized)</h2>
             <div className="bg-card border border-border rounded-lg p-6">
-              <p className="text-foreground/80">
-                Physical signage is static and expensive to redesign & reprint. Digital screens cost 10× more than NFC/QR installations.
-              </p>
+            <p className="text-foreground/80">
+              Visitors lack deep, interactive context when viewing artifacts — static labels don't provide the rich, digitized storytelling they expect.
+            </p>
             </div>
           </section>
 
