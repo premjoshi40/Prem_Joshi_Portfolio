@@ -28,7 +28,7 @@ const FridgeRoaster = () => {
               Smart AI Feedback for Fridge Organization — Reduce waste, maximize freshness
             </p>
             <a
-              href="https://premjoshi40.github.io/Fridge_Roast/"
+              href="https://premjoshi40.github.io/Fridge_Analyzer/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
