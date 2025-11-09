@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { ArrowLeft, ExternalLink, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Amuse = () => {
@@ -49,366 +49,189 @@ const Amuse = () => {
             </div>
           </div>
 
-          {/* Vision Statement */}
+          {/* Background */}
           <section className="space-y-4">
-            <h2 className="text-3xl font-bold text-foreground">Vision Statement</h2>
+            <h2 className="text-3xl font-bold text-foreground">Background</h2>
             <p className="text-foreground/80 leading-relaxed">
-              To revolutionize how people experience culture by merging art, history, and technology — enabling anyone, anywhere, to step inside the world's greatest museums through immersive AR and VR experiences.
+              AMUSE is an AR/VR museum experience platform enabling museums to digitize artifacts and allow users to explore immersive virtual exhibits.
             </p>
           </section>
 
-          {/* Pain Points */}
-          <section className="space-y-6">
-            <h2 className="text-3xl font-bold text-foreground">Pain Points</h2>
-            
-            <div className="space-y-6">
-              <div className="space-y-4">
-                <h3 className="text-2xl font-semibold text-foreground/90">For Visitors</h3>
-                <div className="bg-card border border-border rounded-lg p-6 space-y-3">
-                  {[
-                    "Limited access to museums due to location, cost, or mobility",
-                    "Static, text-heavy exhibits that lack interactivity and engagement",
-                    "Minimal context or storytelling around artifacts"
-                  ].map((point, index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      <CheckCircle2 className="text-primary flex-shrink-0 mt-1" size={20} />
-                      <p className="text-foreground/80">{point}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="space-y-4">
-                <h3 className="text-2xl font-semibold text-foreground/90">For Museums</h3>
-                <div className="bg-card border border-border rounded-lg p-6 space-y-3">
-                  {[
-                    "Physical space constraints restrict the number of displayed artifacts",
-                    "High costs of creating and maintaining digital or interactive experiences",
-                    "Difficulty attracting younger, tech-savvy audiences"
-                  ].map((point, index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      <CheckCircle2 className="text-primary flex-shrink-0 mt-1" size={20} />
-                      <p className="text-foreground/80">{point}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="space-y-4">
-                <h3 className="text-2xl font-semibold text-foreground/90">For Educators/Institutions</h3>
-                <div className="bg-card border border-border rounded-lg p-6 space-y-3">
-                  {[
-                    "Lack of affordable tools for virtual field trips or interactive history lessons",
-                    "Limited ways to make art and cultural studies engaging remotely"
-                  ].map((point, index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      <CheckCircle2 className="text-primary flex-shrink-0 mt-1" size={20} />
-                      <p className="text-foreground/80">{point}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Overview */}
+          {/* Project Overview */}
           <section className="space-y-4">
-            <h2 className="text-3xl font-bold text-foreground">Overview</h2>
+            <h2 className="text-3xl font-bold text-foreground">Project Overview</h2>
             <p className="text-foreground/80 leading-relaxed">
-              AMUSE is an Augmented and Virtual Reality platform designed to transform traditional museum experiences into interactive, immersive journeys. It empowers museums to digitally scan artifacts and create virtual exhibits accessible globally through AR and VR devices, bringing history and art closer to everyone.
+              AMUSE supports artifact uploads, 3D visualization, AR overlays, and VR museum galleries accessible remotely via headset or browser.
             </p>
           </section>
 
-          {/* Purpose / Problem Statement */}
+          {/* Company Mission */}
           <section className="space-y-4">
-            <h2 className="text-3xl font-bold text-foreground">Purpose / Problem Statement</h2>
-            <div className="space-y-4">
-              <div className="bg-card border border-border rounded-lg p-6 space-y-4">
-                <div>
-                  <h3 className="text-xl font-semibold text-foreground/90 mb-2">Problem</h3>
-                  <p className="text-foreground/80">
-                    Museums struggle with accessibility, engagement, and preservation challenges in the digital age. Visitors increasingly expect personalized, immersive experiences rather than static displays.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-foreground/90 mb-2">Goal</h3>
-                  <p className="text-foreground/80">
-                    Create a cross-platform AR/VR museum platform that bridges the physical and digital worlds — allowing users to explore artifacts interactively and learn through immersive storytelling.
-                  </p>
-                </div>
+            <h2 className="text-3xl font-bold text-foreground">Company Mission</h2>
+            <p className="text-foreground/80 leading-relaxed">
+              To make cultural heritage accessible to anyone, anywhere through immersive AR and VR experiences.
+            </p>
+          </section>
+
+          {/* Problem Statement */}
+          <section className="space-y-4">
+            <h2 className="text-3xl font-bold text-foreground">Problem Statement</h2>
+            <p className="text-foreground/80 leading-relaxed">
+              Museum access is limited, exhibits are static, and traditional display formats lack engagement and personalization.
+            </p>
+          </section>
+
+          {/* Ideation Overview */}
+          <section className="space-y-4">
+            <h2 className="text-3xl font-bold text-foreground">Ideation Overview</h2>
+            <p className="text-foreground/80 leading-relaxed">
+              Idea emerged from seeing museum visitors struggle with context depth and wanting remote access for small/local museums.
+            </p>
+          </section>
+
+          {/* Stakeholders */}
+          <section className="space-y-4">
+            <h2 className="text-3xl font-bold text-foreground">Stakeholders</h2>
+            <div className="bg-card border border-border rounded-lg p-6">
+              <h4 className="font-semibold text-foreground text-lg mb-3">Who did you collaborate with:</h4>
+              <div className="grid md:grid-cols-2 gap-3">
+                {["Museum curators", "3D modelers", "AR/VR engineers", "UX designers", "Educational institutions"].map((stakeholder) => (
+                  <div key={stakeholder} className="text-foreground/80">• {stakeholder}</div>
+                ))}
               </div>
             </div>
           </section>
 
-          {/* Objectives & Success Metrics */}
+          {/* Scope */}
           <section className="space-y-4">
-            <h2 className="text-3xl font-bold text-foreground">Objectives & Success Metrics</h2>
-            <div className="bg-card border border-border rounded-lg p-6 space-y-3">
-              {[
-                "Expand accessibility for remote users → ≥25% of total exhibit visits from remote users",
-                "Increase visitor engagement → +30% increase in session time vs. static exhibits",
-                "Reduce digital curation overhead → 40% faster artifact publishing time for curators",
-                "Drive educational adoption → ≥80% positive feedback from teachers/students in pilot programs"
-              ].map((metric, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <CheckCircle2 className="text-primary flex-shrink-0 mt-1" size={20} />
-                  <p className="text-foreground/80">{metric}</p>
-                </div>
-              ))}
-            </div>
+            <h2 className="text-3xl font-bold text-foreground">Scope</h2>
+            <p className="text-foreground/80 leading-relaxed">
+              Ran curator discovery calls + tested artifact scanning with 3D modelers; built prototype for VR gallery navigation and AR item placement.
+            </p>
           </section>
 
-          {/* Target Users & Use Cases */}
-          <section className="space-y-6">
-            <h2 className="text-3xl font-bold text-foreground">Target Users & Use Cases</h2>
-            
-            <div className="space-y-6">
-              <div className="space-y-4">
-                <h3 className="text-2xl font-semibold text-foreground/90">Primary Users</h3>
-                <div className="bg-card border border-border rounded-lg p-6">
-                  <ul className="space-y-2 text-foreground/80">
-                    <li>• Museum Visitors (on-site + virtual)</li>
-                    <li>• Museum Curators & Administrators</li>
-                    <li>• Educators & Students</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="space-y-4">
-                <h3 className="text-2xl font-semibold text-foreground/90">Use Cases</h3>
-                <div className="bg-card border border-border rounded-lg p-6 space-y-4">
-                  {[
-                    { title: "Virtual Exploration", desc: "Users explore museums in VR, moving through realistic 3D galleries" },
-                    { title: "On-site Augmentation", desc: "Visitors scan artifacts with their phone to unlock 3D overlays or behind-the-scenes visuals" },
-                    { title: "Curator Toolset", desc: "Museums upload and manage digital artifacts, metadata, and exhibits" },
-                    { title: "Educational Integration", desc: "Schools use AMUSE for virtual field trips or interactive cultural lessons" }
-                  ].map((useCase, index) => (
-                    <div key={index}>
-                      <h4 className="font-semibold text-foreground mb-1">{index + 1}. {useCase.title}</h4>
-                      <p className="text-foreground/70">{useCase.desc}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Core Features */}
-          <section className="space-y-6">
-            <h2 className="text-3xl font-bold text-foreground">Core Features</h2>
-            
-            <div className="space-y-6">
-              {[
-                {
-                  title: "Artifact Digitization",
-                  features: [
-                    "Upload 3D scans or images of artifacts",
-                    "Add metadata (title, history, cultural origin)",
-                    "Organize exhibits by theme or timeline"
-                  ]
-                },
-                {
-                  title: "Virtual Museum Experience (VR)",
-                  features: [
-                    "Immersive 3D museum accessible via headset or desktop",
-                    "Explore rooms, rotate artifacts, view details in context",
-                    "Ambient spatial sound for realistic experience"
-                  ]
-                },
-                {
-                  title: "Augmented Reality (AR)",
-                  features: [
-                    "Mobile AR mode for projecting artifacts in physical spaces",
-                    "Scan QR or marker to view interactive 3D models",
-                    "Rotate, resize, and inspect artifacts in detail"
-                  ]
-                },
-                {
-                  title: "Curator Dashboard",
-                  features: [
-                    "Manage artifact uploads, exhibit organization, and visitor analytics",
-                    "Edit metadata and add educational materials"
-                  ]
-                }
-              ].map((feature, index) => (
-                <div key={index} className="space-y-4">
-                  <h3 className="text-2xl font-semibold text-foreground/90">{feature.title}</h3>
-                  <div className="bg-card border border-border rounded-lg p-6 space-y-3">
-                    {feature.features.map((item, idx) => (
-                      <div key={idx} className="flex items-start gap-3">
-                        <CheckCircle2 className="text-primary flex-shrink-0 mt-1" size={20} />
-                        <p className="text-foreground/80">{item}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Technical Overview */}
+          {/* Target Customer */}
           <section className="space-y-4">
-            <h2 className="text-3xl font-bold text-foreground">Technical Overview</h2>
+            <h2 className="text-3xl font-bold text-foreground">Target Customer</h2>
+            <ul className="list-disc list-inside space-y-2 text-foreground/80 mb-6">
+              <li>Museum visitors (remote + on-site)</li>
+              <li>Museum staff/curators</li>
+              <li>Schools seeking virtual field trips</li>
+            </ul>
+          </section>
+
+          {/* Customer Personas */}
+          <section className="space-y-4">
+            <h2 className="text-3xl font-bold text-foreground">Customer Personas</h2>
             <div className="grid md:grid-cols-2 gap-4">
-              {[
-                { label: "Frontend (AR/VR)", value: "WebXR, Unity, or Unreal Engine for cross-device compatibility" },
-                { label: "Backend", value: "Firebase / AWS backend for data hosting and artifact storage" },
-                { label: "Database", value: "Firestore or DynamoDB for exhibit metadata" },
-                { label: "3D Processing", value: "Integration with photogrammetry tools for model upload" },
-                { label: "Supported Devices", value: "Oculus, Meta Quest, Apple Vision Pro, desktop, mobile (AR mode)" }
-              ].map((tech) => (
-                <div key={tech.label} className="bg-card border border-border rounded-lg p-6">
-                  <h4 className="font-semibold text-foreground text-lg mb-2">{tech.label}</h4>
-                  <p className="text-foreground/70">{tech.value}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* User Experience Flow */}
-          <section className="space-y-4">
-            <h2 className="text-3xl font-bold text-foreground">User Experience (UX) Flow</h2>
-            <div className="bg-card border border-border rounded-lg p-6 space-y-3">
-              {[
-                "Curator uploads artifact scans and enters metadata",
-                "AMUSE creates a virtual exhibit automatically",
-                "Visitor explores the exhibit via VR headset or browser",
-                "Mobile visitors scan QR codes for AR overlays",
-                "Analytics dashboard tracks engagement, popular artifacts, and session duration"
-              ].map((step, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-semibold">
-                    {index + 1}
-                  </div>
-                  <p className="text-foreground/80 pt-1">{step}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* MVP Scope */}
-          <section className="space-y-6">
-            <h2 className="text-3xl font-bold text-foreground">MVP Scope</h2>
-            
-            <div className="space-y-6">
-              <div className="space-y-4">
-                <h3 className="text-2xl font-semibold text-foreground/90">In MVP</h3>
-                <div className="bg-card border border-border rounded-lg p-6 space-y-3">
-                  {[
-                    "Artifact upload & 3D rendering",
-                    "VR exploration environment",
-                    "AR projection for mobile",
-                    "Basic curator dashboard"
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      <CheckCircle2 className="text-primary flex-shrink-0 mt-1" size={20} />
-                      <p className="text-foreground/80">{item}</p>
-                    </div>
-                  ))}
-                </div>
+              <div className="bg-card border border-border rounded-lg p-6">
+                <h4 className="font-semibold text-foreground text-lg mb-2">Customer Persona 1</h4>
+                <p className="text-foreground/80 leading-relaxed">
+                  <strong>Remote museum visitor</strong><br/>
+                  Lacks physical museum access but seeks rich cultural exploration.
+                </p>
               </div>
-
-              <div className="space-y-4">
-                <h3 className="text-2xl font-semibold text-foreground/90">Out of Scope (Future Enhancements)</h3>
-                <div className="bg-card border border-border rounded-lg p-6 space-y-2">
-                  {[
-                    "AI-generated artifact descriptions and narrations",
-                    "Multilingual audio guides",
-                    "AI-driven personalized tours",
-                    "Adaptive storytelling and educational recommendations"
-                  ].map((item, index) => (
-                    <p key={index} className="text-foreground/70">• {item}</p>
-                  ))}
-                </div>
+              <div className="bg-card border border-border rounded-lg p-6">
+                <h4 className="font-semibold text-foreground text-lg mb-2">Customer Persona 2</h4>
+                <p className="text-foreground/80 leading-relaxed">
+                  <strong>Curator</strong><br/>
+                  Wants to publish artifacts digitally quickly and maintain storytelling quality.
+                </p>
               </div>
             </div>
           </section>
 
-          {/* Dependencies & Risks */}
+          {/* Customer Segmentation */}
           <section className="space-y-4">
-            <h2 className="text-3xl font-bold text-foreground">Dependencies & Risks</h2>
-            <div className="bg-card border border-border rounded-lg p-6 space-y-4">
-              {[
-                { risk: "Inconsistent 3D model quality", mitigation: "Provide scanning guidelines and templates" },
-                { risk: "Device performance variation", mitigation: "Optimize rendering with adaptive detail levels" },
-                { risk: "Limited AR/VR adoption", mitigation: "Offer browser-based WebXR fallback" },
-                { risk: "Data ownership/privacy", mitigation: "Implement secure museum-level access controls" }
-              ].map((item, index) => (
-                <div key={index}>
-                  <p className="text-foreground/80"><span className="font-semibold">Risk:</span> {item.risk}</p>
-                  <p className="text-foreground/70 ml-4"><span className="font-semibold">Mitigation:</span> {item.mitigation}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Business Model & Impact */}
-          <section className="space-y-6">
-            <h2 className="text-3xl font-bold text-foreground">Business Model & Impact</h2>
-            
-            <div className="space-y-6">
-              <div className="space-y-4">
-                <h3 className="text-2xl font-semibold text-foreground/90">Revenue Model</h3>
-                <div className="bg-card border border-border rounded-lg p-6 space-y-3">
-                  {[
-                    "Freemium model for small institutions",
-                    "Subscription plans for premium features (multi-exhibit hosting, analytics)",
-                    "Partnerships with schools and cultural organizations"
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      <CheckCircle2 className="text-primary flex-shrink-0 mt-1" size={20} />
-                      <p className="text-foreground/80">{item}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="space-y-4">
-                <h3 className="text-2xl font-semibold text-foreground/90">Impact</h3>
-                <div className="bg-card border border-border rounded-lg p-6 space-y-3">
-                  {[
-                    "Expands global reach of museums",
-                    "Preserves cultural heritage digitally",
-                    "Encourages cross-generational learning and curiosity"
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      <CheckCircle2 className="text-primary flex-shrink-0 mt-1" size={20} />
-                      <p className="text-foreground/80">{item}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Vision Roadmap */}
-          <section className="space-y-4">
-            <h2 className="text-3xl font-bold text-foreground">Vision Roadmap</h2>
-            <div className="bg-card border border-border rounded-lg p-6 space-y-4">
-              {[
-                { phase: "Phase 1 (MVP)", desc: "Core AR/VR experience, curator dashboard" },
-                { phase: "Phase 2", desc: "Multi-user VR tours, advanced analytics" },
-                { phase: "Phase 3 (Future Enhancements)", desc: "AI narrations, multilingual descriptions, personalization engine" }
-              ].map((item, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-semibold">
-                    {index + 1}
-                  </div>
-                  <div className="pt-1">
-                    <h4 className="font-semibold text-foreground">{item.phase}</h4>
-                    <p className="text-foreground/70">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Long-Term Vision */}
-          <section className="space-y-4">
-            <h2 className="text-3xl font-bold text-foreground">Long-Term Vision</h2>
+            <h2 className="text-3xl font-bold text-foreground">Customer Segmentation (Prioritized Segment)</h2>
             <p className="text-foreground/80 leading-relaxed">
-              AMUSE aspires to become the global platform for immersive cultural exploration — digitizing history, preserving heritage, and enabling anyone to experience the world's museums without borders.
+              Curators digitizing artifacts for remote VR/AR consumption.
             </p>
+          </section>
+
+          {/* Customer Pain Point */}
+          <section className="space-y-4">
+            <h2 className="text-3xl font-bold text-foreground">Customer Pain Point (Prioritized)</h2>
+            <div className="bg-card border border-border rounded-lg p-6">
+              <p className="text-foreground/80">
+                Physical exhibit space limitations + inability to digitally scale artifacts globally.
+              </p>
+            </div>
+          </section>
+
+          {/* Prioritized Solutions */}
+          <section className="space-y-4">
+            <h2 className="text-3xl font-bold text-foreground">Prioritized Solutions</h2>
+            <div className="bg-card border border-border rounded-lg p-6">
+              <p className="text-foreground/80">
+                VR museum environment and AR artifact placement to maximize access and engagement.
+              </p>
+            </div>
+          </section>
+
+          {/* MVP Development */}
+          <section className="space-y-4">
+            <h2 className="text-3xl font-bold text-foreground">Develop MVP</h2>
+            <div className="bg-card border border-border rounded-lg p-6">
+              <h4 className="font-semibold text-foreground text-lg mb-3">MVP Features:</h4>
+              <ul className="list-disc list-inside space-y-2 text-foreground/80">
+                <li>Artifact upload</li>
+                <li>VR gallery</li>
+                <li>Basic AR projection</li>
+                <li>Curator dashboard</li>
+              </ul>
+            </div>
+          </section>
+
+          {/* North Star Metric */}
+          <section className="space-y-4">
+            <h2 className="text-3xl font-bold text-foreground">North Star Metric</h2>
+            <div className="bg-card border border-border rounded-lg p-6">
+              <p className="text-foreground/80 leading-relaxed">
+                <strong>Avg minutes spent per artifact inside VR experience.</strong>
+              </p>
+            </div>
+          </section>
+
+          {/* User Stories */}
+          <section className="space-y-4">
+            <h2 className="text-3xl font-bold text-foreground">User Stories & Acceptance Criteria</h2>
+            <div className="bg-card border border-border rounded-lg p-6">
+              <p className="text-foreground/80">
+                <strong>As a remote visitor,</strong> I want to explore artifacts in VR so I can learn without physically visiting a museum.
+              </p>
+            </div>
+          </section>
+
+          {/* Launch Strategy */}
+          <section className="space-y-4">
+            <h2 className="text-3xl font-bold text-foreground">Launch</h2>
+            <p className="text-foreground/80 leading-relaxed">
+              Initial launch as pilot with 2 small museum partners and 1 university program.
+            </p>
+          </section>
+
+          {/* Results & Impact */}
+          <section className="space-y-4">
+            <h2 className="text-3xl font-bold text-foreground">Result & Impact</h2>
+            <div className="bg-card border border-border rounded-lg p-6">
+              <p className="text-foreground/80">
+                Visitors spent <strong>2.4x longer</strong> exploring artifacts in VR compared to static web exhibits.
+              </p>
+            </div>
+          </section>
+
+          {/* Customer Feedback */}
+          <section className="space-y-4">
+            <h2 className="text-3xl font-bold text-foreground">Customer Feedback & Iterations</h2>
+            <div className="bg-card border border-border rounded-lg p-6">
+              <h4 className="font-semibold text-foreground text-lg mb-3">Requests:</h4>
+              <ul className="list-disc list-inside space-y-2 text-foreground/80">
+                <li>Multi-language voiceover support</li>
+                <li>Multi-user VR rooms</li>
+                <li>Curated themed collections</li>
+              </ul>
+            </div>
           </section>
         </div>
       </main>
