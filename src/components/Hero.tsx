@@ -58,15 +58,15 @@ const Hero = () => {
                     </DialogTrigger>
                     <DialogContent className="max-w-4xl max-h-[90vh]">
                       <DialogHeader>
-                        <DialogTitle className="text-2xl font-bold">More About Me</DialogTitle>
+                        <DialogTitle className="text-3xl font-bold">More About Me</DialogTitle>
                       </DialogHeader>
                       <ScrollArea className="h-[70vh] pr-4">
-                        <div className="space-y-6 text-foreground/90">
-                          <section>
-                            <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                        <div className="space-y-8 text-foreground/90">
+                          <section className="space-y-4">
+                            <h3 className="text-2xl font-semibold mb-4 flex items-center gap-3 text-primary">
                               🧭 More About Me
                             </h3>
-                            <div className="space-y-4 text-base leading-relaxed">
+                            <div className="space-y-4 text-base leading-relaxed bg-muted/30 p-6 rounded-lg">
                               <p>
                                 I'm Prem Joshi, a Product Manager and technologist passionate about building intelligent, scalable products that simplify complexity and deliver measurable impact. With over 6 years of experience spanning software engineering, consulting, and product management, I specialize in driving end-to-end product lifecycles — from discovery to launch to scale.
                               </p>
@@ -85,58 +85,69 @@ const Hero = () => {
                             </div>
                           </section>
 
-                          <section>
-                            <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                          <section className="space-y-4">
+                            <h3 className="text-2xl font-semibold mb-4 flex items-center gap-3 text-primary">
                               ⚙️ Tech & Product Stack
                             </h3>
-                            <div className="space-y-2 text-base">
-                              <p><strong>Product:</strong> Strategy, Roadmapping, MVPs, A/B Testing, Metrics, B2B SaaS, AI/ML Integration</p>
-                              <p><strong>Tech:</strong> Java, Python, JavaScript, React, SQL/NoSQL, AWS, GCP, Docker, Kubernetes, Terraform</p>
-                              <p><strong>Analytics:</strong> Data Visualization, Experiment Design, KPI Tracking, Product Analytics (Mixpanel, Amplitude)</p>
+                            <div className="space-y-3 text-base bg-muted/30 p-6 rounded-lg">
+                              <div className="grid gap-3">
+                                <div>
+                                  <span className="font-semibold text-foreground">Product:</span>
+                                  <span className="text-foreground/80"> Strategy, Roadmapping, MVPs, A/B Testing, Metrics, B2B SaaS, AI/ML Integration</span>
+                                </div>
+                                <div>
+                                  <span className="font-semibold text-foreground">Tech:</span>
+                                  <span className="text-foreground/80"> Java, Python, JavaScript, React, SQL/NoSQL, AWS, GCP, Docker, Kubernetes, Terraform</span>
+                                </div>
+                                <div>
+                                  <span className="font-semibold text-foreground">Analytics:</span>
+                                  <span className="text-foreground/80"> Data Visualization, Experiment Design, KPI Tracking, Product Analytics (Mixpanel, Amplitude)</span>
+                                </div>
+                              </div>
                             </div>
                           </section>
 
-                          <section>
-                            <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                          <section className="space-y-4">
+                            <h3 className="text-2xl font-semibold mb-4 flex items-center gap-3 text-primary">
                               📈 Impact So Far
                             </h3>
-                            <div className="space-y-3 text-base">
-                              <p className="flex gap-2">
-                                <span>🚀</span>
-                                <span>70% faster audit workflows and $8.5M annual profit uplift through AI-driven automation (Risk GPT @ EY)</span>
-                              </p>
-                              <p className="flex gap-2">
-                                <span>🧠</span>
-                                <span>Projected: Up to 80% faster document retrieval and 2× productivity gain through AI semantic search and intelligent query matching (Auralis – AI chatbot for document management)</span>
-                              </p>
-                              <p className="flex gap-2">
-                                <span>🎨</span>
-                                <span>Projected: 3× higher visitor engagement and 40% improved satisfaction via AR/VR-powered artifact exploration (AMUSE – immersive museum experience platform)</span>
-                              </p>
-                              <p className="flex gap-2">
-                                <span>💻</span>
-                                <span>Delivered multiple enterprise and consumer-facing applications as a software developer - including an e-commerce platform for Adhesives, Vodafone mPower enterprise application, and a high-traffic website for one of India's largest electronics retailers, enhancing customer experience and digital conversion rates.</span>
-                              </p>
-                              <p className="flex gap-2">
-                                <span>☁️</span>
-                                <span>$1.2M annual cloud cost savings and 45% faster performance achieved through multi-tenant AWS scaling and optimization initiatives.</span>
-                              </p>
-                              <p className="flex gap-2">
-                                <span>🤝</span>
-                                <span>Mentored 12+ engineers, improving cross-functional collaboration and boosting team productivity by 30%.</span>
-                              </p>
+                            <div className="space-y-4 text-base bg-muted/30 p-6 rounded-lg">
+                              <div className="flex gap-3 items-start">
+                                <span className="text-2xl">🚀</span>
+                                <span className="text-foreground/80 leading-relaxed">70% faster audit workflows and $8.5M annual profit uplift through AI-driven automation (Risk GPT @ EY)</span>
+                              </div>
+                              <div className="flex gap-3 items-start">
+                                <span className="text-2xl">🧠</span>
+                                <span className="text-foreground/80 leading-relaxed">Projected: Up to 80% faster document retrieval and 2× productivity gain through AI semantic search and intelligent query matching (Auralis – AI chatbot for document management)</span>
+                              </div>
+                              <div className="flex gap-3 items-start">
+                                <span className="text-2xl">🎨</span>
+                                <span className="text-foreground/80 leading-relaxed">Projected: 3× higher visitor engagement and 40% improved satisfaction via AR/VR-powered artifact exploration (AMUSE – immersive museum experience platform)</span>
+                              </div>
+                              <div className="flex gap-3 items-start">
+                                <span className="text-2xl">💻</span>
+                                <span className="text-foreground/80 leading-relaxed">Delivered multiple enterprise and consumer-facing applications as a software developer - including an e-commerce platform for Adhesives, Vodafone mPower enterprise application, and a high-traffic website for one of India's largest electronics retailers, enhancing customer experience and digital conversion rates.</span>
+                              </div>
+                              <div className="flex gap-3 items-start">
+                                <span className="text-2xl">☁️</span>
+                                <span className="text-foreground/80 leading-relaxed">$1.2M annual cloud cost savings and 45% faster performance achieved through multi-tenant AWS scaling and optimization initiatives.</span>
+                              </div>
+                              <div className="flex gap-3 items-start">
+                                <span className="text-2xl">🤝</span>
+                                <span className="text-foreground/80 leading-relaxed">Mentored 12+ engineers, improving cross-functional collaboration and boosting team productivity by 30%.</span>
+                              </div>
                             </div>
                           </section>
 
-                          <section>
-                            <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                          <section className="space-y-4">
+                            <h3 className="text-2xl font-semibold mb-4 flex items-center gap-3 text-primary">
                               ⚽ Beyond Work
                             </h3>
-                            <div className="space-y-4 text-base leading-relaxed">
-                              <p>
+                            <div className="space-y-4 text-base leading-relaxed bg-muted/30 p-6 rounded-lg">
+                              <p className="text-foreground/80">
                                 Outside of product and technology, I'm deeply passionate about soccer - both on and off the field. I've played competitively for over a decade as a semi-professional player and currently contribute as a part-time soccer analyst, focusing on match breakdowns, team dynamics, and performance insights.
                               </p>
-                              <p>
+                              <p className="text-foreground/80">
                                 As a lifelong Manchester United fan, the game has taught me the value of teamwork, adaptability, and strategic decision-making - qualities that translate directly into how I lead teams and build products. Whether on the pitch or in a product room, I thrive on collaboration, fast execution, and a shared goal of winning as a team.
                               </p>
                             </div>
