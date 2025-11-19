@@ -36,7 +36,7 @@ const Hero = () => {
                 </h2>
                 
                 <p className="text-base text-foreground/80 leading-relaxed max-w-xl">
-                  Product Manager and builder with 6+ years of experience launching and scaling B2B SaaS, B2B2C, and cloud platform products. I'm passionate about solving hard problems, turning ideas into products that reach thousands of users, and driving measurable business impact. I thrive at the intersection of strategy and execution building at scale from concept to launch and beyond.
+                  Product Manager and builder with 6+ years of experience launching and scaling AI-driven, B2B SaaS, B2B2C, and cloud platform products. Passionate about solving hard problems, turning ideas into products that impact thousands of users, and driving measurable business outcomes. I thrive at the intersection of strategy and execution building at scale from concept to launch and beyond.
                 </p>
                 
                 <div className="pt-4">
