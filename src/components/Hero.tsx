@@ -127,6 +127,20 @@ const Hero = () => {
                               </p>
                             </div>
                           </section>
+
+                          <section>
+                            <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                              ⚽ Beyond Work
+                            </h3>
+                            <div className="space-y-4 text-base leading-relaxed">
+                              <p>
+                                Outside of product and technology, I'm deeply passionate about soccer - both on and off the field. I've played competitively for over a decade as a semi-professional player and currently contribute as a part-time soccer analyst, focusing on match breakdowns, team dynamics, and performance insights.
+                              </p>
+                              <p>
+                                As a lifelong Manchester United fan, the game has taught me the value of teamwork, adaptability, and strategic decision-making - qualities that translate directly into how I lead teams and build products. Whether on the pitch or in a product room, I thrive on collaboration, fast execution, and a shared goal of winning as a team.
+                              </p>
+                            </div>
+                          </section>
                         </div>
                       </ScrollArea>
                     </DialogContent>
