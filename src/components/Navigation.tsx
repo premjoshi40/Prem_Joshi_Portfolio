@@ -1,4 +1,4 @@
-import { Download, Mail } from "lucide-react";
+import { Download, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navigation = () => {
@@ -33,9 +33,9 @@ const Navigation = () => {
               className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
               asChild
             >
-              <a href="#contact" className="flex items-center gap-2">
-                <Mail className="w-4 h-4" />
-                <span className="hidden sm:inline">Contact</span>
+              <a href="tel:+17169078987" className="flex items-center gap-2">
+                <Phone className="w-4 h-4" />
+                <span className="hidden sm:inline">716-907-8987</span>
               </a>
             </Button>
           </div>
