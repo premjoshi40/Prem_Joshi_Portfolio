@@ -1,7 +1,18 @@
-import { Download, Phone } from "lucide-react";
+import { Download, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useToast } from "@/hooks/use-toast";
 
 const Navigation = () => {
+  const { toast } = useToast();
+
+  const handleContactClick = () => {
+    toast({
+      title: "Contact Me",
+      description: "📞 Phone: 716-907-8987",
+      duration: 5000,
+    });
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border/50">
       <div className="container mx-auto px-6 lg:px-12">
@@ -31,12 +42,10 @@ const Navigation = () => {
 
             <Button 
               className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
-              asChild
+              onClick={handleContactClick}
             >
-              <a href="tel:+17169078987" className="flex items-center gap-2">
-                <Phone className="w-4 h-4" />
-                <span className="hidden sm:inline">716-907-8987</span>
-              </a>
+              <Mail className="w-4 h-4" />
+              <span className="hidden sm:inline">Contact</span>
             </Button>
           </div>
         </div>
