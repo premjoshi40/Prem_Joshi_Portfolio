@@ -34,7 +34,7 @@ const Navigation = () => {
               className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
               asChild
             >
-              <a href="#resume" className="flex items-center gap-2">
+              <a href="/Joshi_Prem.docx" download="Joshi_Prem.docx" className="flex items-center gap-2">
                 <Download className="w-4 h-4" />
                 <span className="hidden sm:inline">Resume</span>
               </a>
