@@ -104,7 +104,7 @@ const SideRail = () => {
                 className={cn(
                   "group relative w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-200",
                   isActive
-                    ? "bg-foreground text-background shadow-[0_8px_20px_-8px_hsl(var(--foreground)/0.6)]"
+                    ? "bg-[image:var(--gradient-sunset)] text-white shadow-[var(--shadow-glow)]"
                     : "text-foreground/50 hover:text-foreground hover:bg-muted"
                 )}
                 aria-label={item.label}
