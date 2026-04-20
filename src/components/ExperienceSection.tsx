@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
-import eyLogo from "@/assets/ey-logo.png";
+import eyLogo from "@/assets/ey-logo.webp";
 
 const experiences: {
   role: string;
@@ -68,7 +68,7 @@ const ExperienceSection = () => {
                   <div
                     className={cn(
                       "w-14 h-14 flex-shrink-0 rounded-xl flex items-center justify-center text-base font-bold overflow-hidden",
-                      exp.logoImage ? "bg-black" : "bg-foreground text-background"
+                      exp.logoImage ? "bg-white border border-border" : "bg-foreground text-background"
                     )}
                   >
                     {exp.logoImage ? (
