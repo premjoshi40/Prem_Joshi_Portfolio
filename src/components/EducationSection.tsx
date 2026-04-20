@@ -3,6 +3,8 @@ import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Reveal from "@/components/Reveal";
 import RevealHeading from "@/components/RevealHeading";
+import ubLogo from "@/assets/ub-logo.webp";
+import sppuLogo from "@/assets/sppu-logo.webp";
 
 const education: {
   school: string;
@@ -12,6 +14,23 @@ const education: {
   logo: string;
   coursework: string[];
 }[] = [
+  {
+    school: "University at Buffalo",
+    degree: "Master of Science, Management Information Systems",
+    detail: "School of Management",
+    period: "",
+    logo: ubLogo,
+    coursework: [],
+  },
+  {
+    school: "Savitribai Phule Pune University",
+    degree: "Bachelor of Engineering, Electronics & Telecommunications",
+    detail: "",
+    period: "",
+    logo: sppuLogo,
+    coursework: [],
+  },
+];
   {
     school: "University at Buffalo",
     degree: "Master of Science, Management Information Systems",
