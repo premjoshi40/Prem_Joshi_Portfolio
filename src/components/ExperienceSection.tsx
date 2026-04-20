@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
+import eyLogo from "@/assets/ey-logo.png";
 
 const experiences: {
   role: string;
@@ -8,6 +9,7 @@ const experiences: {
   type: string;
   period: string;
   logo: string;
+  logoImage?: string;
   description: string[];
 }[] = [
   {
@@ -16,6 +18,7 @@ const experiences: {
     type: "Full-time",
     period: "Sep 2022 — Present",
     logo: "EY",
+    logoImage: eyLogo,
     description: [],
   },
   {
@@ -58,12 +61,26 @@ const ExperienceSection = () => {
             const isOpen = open === idx;
             return (
               <div
-                key={exp.role}
+                key={`${exp.role}-${exp.company}-${exp.period}`}
                 className="bg-card rounded-2xl border border-border overflow-hidden transition-all hover:shadow-[var(--shadow-soft)]"
               >
                 <div className="flex items-start gap-5 p-5">
-                  <div className="w-14 h-14 flex-shrink-0 rounded-xl bg-foreground text-background font-bold flex items-center justify-center text-base">
-                    {exp.logo}
+                  <div
+                    className={cn(
+                      "w-14 h-14 flex-shrink-0 rounded-xl flex items-center justify-center text-base font-bold overflow-hidden",
+                      exp.logoImage ? "bg-black" : "bg-foreground text-background"
+                    )}
+                  >
+                    {exp.logoImage ? (
+                      <img
+                        src={exp.logoImage}
+                        alt={`${exp.company} logo`}
+                        className="w-full h-full object-contain p-1"
+                        loading="lazy"
+                      />
+                    ) : (
+                      exp.logo
+                    )}
                   </div>
                   <div className="flex-1 min-w-0">
                     <h3 className="text-lg font-bold text-foreground">
