@@ -1,7 +1,6 @@
 import premAvatar from "@/assets/prem-3d-avatar.png";
 import { Download, ArrowRight } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { ScrollArea } from "@/components/ui/scroll-area";
 
 const Hero = () => {
   return (
