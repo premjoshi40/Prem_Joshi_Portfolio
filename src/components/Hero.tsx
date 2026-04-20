@@ -1,5 +1,7 @@
-import premAvatar from "@/assets/avatar-option-3.png";
+import premPhoto from "@/assets/prem-sunset-photo.jpg";
 import { Download } from "lucide-react";
+import Reveal from "@/components/Reveal";
+import RevealHeading from "@/components/RevealHeading";
 
 const Hero = () => {
   return (
@@ -19,9 +21,9 @@ const Hero = () => {
         style={{ animationDelay: "0.8s" }}
       />
 
-      <div className="container mx-auto max-w-7xl">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left: Text */}
+      <div className="container mx-auto max-w-7xl py-20 lg:py-28">
+        <div className="grid lg:grid-cols-[1.3fr_1fr] gap-12 lg:gap-16 items-center">
+          {/* Left: Intro + Biography */}
           <div className="space-y-7 order-2 lg:order-1">
             <p className="text-sm font-medium text-muted-foreground tracking-wide uppercase animate-fade-in">
               Hello, my name is
@@ -49,9 +51,22 @@ const Hero = () => {
               Product Manager — Cloud / AI-ML
             </p>
 
+            <Reveal animation="fade-in" delay={300}>
+              <div id="about" className="pt-2">
+                <RevealHeading title="Biography" />
+                <p className="text-foreground/80 leading-relaxed max-w-2xl">
+                  Go-getter, customer-first Product Manager with 6+ years of experience leveraging an
+                  engineering foundation to build and scale cloud, SaaS, and AI/ML products from
+                  conception to launch through cross-functional collaboration while translating complex
+                  problems into actionable decisions that deliver customer value. Bringing a
+                  high-performance mindset as a professional soccer player.
+                </p>
+              </div>
+            </Reveal>
+
             <div
               className="flex flex-wrap gap-3 pt-2 animate-fade-in"
-              style={{ animationDelay: "360ms" }}
+              style={{ animationDelay: "480ms" }}
             >
               <button
                 onClick={() =>
@@ -68,39 +83,27 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right: 3D Avatar with float + glow */}
-          <div className="relative flex justify-center order-1 lg:order-2 animate-fade-in-right">
-            <div className="relative w-full max-w-[480px] aspect-square animate-float-slow">
-              {/* Spinning gradient ring */}
+          {/* Right: Real photo */}
+          <Reveal animation="fade-in-right" className="flex flex-col items-center text-center order-1 lg:order-2">
+            <div className="relative group">
               <div
-                className="absolute -inset-4 rounded-[3.5rem] opacity-40 blur-2xl animate-spin-slow"
-                style={{
-                  background:
-                    "conic-gradient(from 0deg, hsl(var(--orange)), hsl(var(--amber)), hsl(var(--magenta)), hsl(var(--violet)), hsl(var(--orange)))",
-                }}
+                className="absolute inset-0 rounded-full bg-[image:var(--gradient-sunset)] opacity-30 blur-3xl scale-110 animate-pulse-scale"
+                aria-hidden
               />
-              {/* Layered depth blobs with sunset accents */}
-              <div className="absolute inset-0 rounded-[3rem] bg-[image:var(--gradient-sunset)] rotate-3 shadow-[var(--shadow-glow)] transition-transform duration-500 hover:rotate-6" />
-              <div className="absolute inset-0 rounded-[3rem] bg-card -rotate-2 border border-border shadow-[var(--shadow-soft)] transition-transform duration-500 hover:-rotate-3" />
-              {/* Avatar */}
-              <div className="relative w-full h-full rounded-[3rem] overflow-hidden bg-gradient-to-b from-[hsl(var(--orange)/0.08)] via-[hsl(var(--magenta)/0.06)] to-background flex items-end justify-center group">
+              <div className="relative w-64 h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-foreground shadow-[var(--shadow-glow)] bg-card transition-transform duration-500 group-hover:scale-105 group-hover:rotate-2">
                 <img
-                  src={premAvatar}
-                  alt="Prem Joshi - 3D illustrated avatar"
-                  className="w-full h-full object-contain object-bottom transition-transform duration-700 group-hover:scale-105"
-                  width={1024}
-                  height={1024}
+                  src={premPhoto}
+                  alt="Prem Joshi"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  loading="eager"
                 />
-                {/* Shimmer sweep on hover */}
-                <div className="pointer-events-none absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
               </div>
-              {/* Floating badge */}
-              <div className="absolute -bottom-4 -left-4 bg-[image:var(--gradient-warm)] text-white px-4 py-2.5 rounded-xl shadow-[var(--shadow-glow)] flex items-center gap-2 text-sm font-semibold animate-bounce-subtle">
+              <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-[image:var(--gradient-warm)] text-white px-4 py-2 rounded-xl shadow-[var(--shadow-glow)] flex items-center gap-2 text-xs font-semibold animate-bounce-subtle whitespace-nowrap">
                 <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
                 Open to opportunities
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>
