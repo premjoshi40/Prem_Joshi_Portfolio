@@ -44,10 +44,10 @@ const ContactSection = () => (
             href={href}
             target={href.startsWith("http") ? "_blank" : undefined}
             rel="noopener noreferrer"
-            className="group relative bg-card border border-border rounded-2xl p-7 hover:-translate-y-1 hover:shadow-[0_25px_50px_-15px_hsl(var(--foreground)/0.25)] transition-all"
+            className="group relative bg-card border border-border rounded-2xl p-7 hover:-translate-y-1 hover:shadow-[var(--shadow-glow)] hover:border-primary/40 transition-all"
           >
             <div className="flex items-start justify-between mb-6">
-              <div className="w-12 h-12 rounded-xl bg-foreground text-background flex items-center justify-center shadow-[0_10px_20px_-8px_hsl(var(--foreground)/0.5)] group-hover:scale-110 transition-transform">
+              <div className="w-12 h-12 rounded-xl bg-[image:var(--gradient-sunset)] text-white flex items-center justify-center shadow-[var(--shadow-glow)] group-hover:scale-110 transition-transform">
                 <Icon size={20} />
               </div>
               <ArrowUpRight
