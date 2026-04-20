@@ -57,9 +57,11 @@ const ExperienceSection = () => {
           {experiences.map((exp, idx) => {
             const isOpen = open === idx;
             return (
-              <div
+              <Reveal
                 key={`${exp.role}-${exp.company}-${exp.period}`}
-                className="bg-card rounded-2xl border border-border overflow-hidden transition-all hover:shadow-[var(--shadow-soft)]"
+                animation="fade-in-left"
+                delay={idx * 100}
+                className="group bg-card rounded-2xl border border-border overflow-hidden transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_40px_-15px_hsl(var(--orange)/0.4)] hover:border-[hsl(var(--orange)/0.5)]"
               >
                 <div className="flex items-start gap-5 p-5">
                   <div
@@ -87,7 +89,7 @@ const ExperienceSection = () => {
                     <p className="text-sm text-muted-foreground">{exp.period}</p>
                     <button
                       onClick={() => setOpen(isOpen ? null : idx)}
-                      className="inline-flex items-center gap-1.5 mt-3 px-3.5 py-1.5 rounded-lg bg-foreground text-background text-xs font-semibold hover:bg-foreground/85 transition-colors"
+                      className="inline-flex items-center gap-1.5 mt-3 px-3.5 py-1.5 rounded-lg bg-foreground text-background text-xs font-semibold hover:bg-[image:var(--gradient-sunset)] hover:shadow-[0_8px_20px_-8px_hsl(var(--orange)/0.7)] hover:scale-105 active:scale-95 transition-all"
                     >
                       {isOpen ? "Hide" : "Show"} Description
                       <ChevronDown
@@ -114,7 +116,7 @@ const ExperienceSection = () => {
                     </ul>
                   </div>
                 </div>
-              </div>
+              </Reveal>
             );
           })}
         </div>
