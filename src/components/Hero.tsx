@@ -118,7 +118,7 @@ const Hero = () => {
               </div>
               {/* Floating badge */}
               <div className="absolute -bottom-4 -left-4 bg-foreground text-background px-4 py-2.5 rounded-xl shadow-xl flex items-center gap-2 text-sm font-semibold">
-                <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+                <span className="w-2 h-2 rounded-full bg-[hsl(var(--lime))] animate-pulse" />
                 Open to opportunities
               </div>
             </div>
