@@ -24,6 +24,10 @@ const ExperienceSection = () => {
           <h2 className="text-3xl lg:text-4xl font-extrabold tracking-tight">Experience</h2>
         </div>
 
+        {experiences.length === 0 && (
+          <p className="text-muted-foreground italic">Experience details coming soon.</p>
+        )}
+
         <div className="space-y-4">
           {experiences.map((exp, idx) => {
             const isOpen = open === idx;

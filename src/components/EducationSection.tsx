@@ -24,6 +24,10 @@ const EducationSection = () => {
           <h2 className="text-3xl lg:text-4xl font-extrabold tracking-tight">Education</h2>
         </div>
 
+        {education.length === 0 && (
+          <p className="text-muted-foreground italic">Education details coming soon.</p>
+        )}
+
         <div className="space-y-4">
           {education.map((ed, idx) => {
             const isOpen = open === idx;
