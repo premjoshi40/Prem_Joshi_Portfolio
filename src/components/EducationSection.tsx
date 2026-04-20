@@ -11,7 +11,24 @@ const education: {
   period: string;
   logo: string;
   coursework: string[];
-}[] = [];
+}[] = [
+  {
+    school: "University at Buffalo",
+    degree: "Master of Science, Management Information Systems",
+    detail: "School of Management",
+    period: "",
+    logo: "UB",
+    coursework: [],
+  },
+  {
+    school: "Savitribai Phule Pune University",
+    degree: "Bachelor of Engineering, Electronics & Telecommunications",
+    detail: "",
+    period: "",
+    logo: "SPPU",
+    coursework: [],
+  },
+];
 
 const EducationSection = () => {
   const [open, setOpen] = useState<number | null>(null);
