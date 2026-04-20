@@ -35,23 +35,6 @@ const Hero = () => {
               of strategy and execution — taking ideas from concept to launch and beyond.
             </p>
 
-            <ul className="space-y-2 text-sm text-foreground/80">
-              {[
-                { text: "AWS Certified — ML Engineer, Solutions Architect, Cloud Practitioner", color: "var(--orange)" },
-                { text: "Professional Scrum Master™ I (PSM I)", color: "var(--amber)" },
-                { text: "Led Risk GPT @ EY — 70% efficiency gain, $8.5M+ profit uplift", color: "var(--magenta)" },
-                { text: "Building Auralis & AMUSE — AI + AR/VR products", color: "var(--violet)" },
-              ].map((item) => (
-                <li key={item.text} className="flex gap-3 items-start">
-                  <span
-                    className="mt-2 w-2 h-2 rounded-full flex-shrink-0"
-                    style={{ backgroundColor: `hsl(${item.color})` }}
-                  />
-                  <span>{item.text}</span>
-                </li>
-              ))}
-            </ul>
-
             <div className="flex flex-wrap gap-3 pt-2">
               <button
                 onClick={() =>
