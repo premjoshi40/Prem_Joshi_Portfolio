@@ -1,3 +1,6 @@
+import Reveal from "@/components/Reveal";
+import RevealHeading from "@/components/RevealHeading";
+
 const groups = [
   {
     title: "Product Management",
@@ -32,28 +35,24 @@ const groups = [
 const SkillsSection = () => (
   <section id="skills" className="py-24 px-6 lg:px-16 bg-background">
     <div className="container mx-auto max-w-5xl">
-      <div className="inline-flex items-center gap-3 mb-10">
-        <span className="w-9 h-9 rounded-full bg-foreground/10 flex items-center justify-center">
-          <span className="w-3 h-3 rounded-full bg-foreground" />
-        </span>
-        <h2 className="text-3xl lg:text-4xl font-extrabold tracking-tight">Skills</h2>
-      </div>
+      <RevealHeading title="Skills" />
 
       <div className="space-y-8">
-        {groups.map((group) => (
-          <div key={group.title}>
+        {groups.map((group, gi) => (
+          <Reveal key={group.title} delay={gi * 100}>
             <h3 className="text-lg font-bold text-foreground mb-3">{group.title}</h3>
             <div className="flex flex-wrap gap-2">
-              {group.skills.map((s) => (
+              {group.skills.map((s, si) => (
                 <span
                   key={s}
-                  className="px-3.5 py-1.5 rounded-lg bg-muted text-foreground/85 text-sm font-medium border border-border hover:border-foreground hover:bg-card transition-colors"
+                  style={{ animationDelay: `${gi * 100 + si * 30}ms` }}
+                  className="px-3.5 py-1.5 rounded-lg bg-muted text-foreground/85 text-sm font-medium border border-border hover:border-[hsl(var(--orange))] hover:bg-card hover:text-[hsl(var(--orange))] hover:-translate-y-0.5 hover:shadow-[0_6px_18px_-6px_hsl(var(--orange)/0.5)] transition-all duration-300 cursor-default"
                 >
                   {s}
                 </span>
               ))}
             </div>
-          </div>
+          </Reveal>
         ))}
       </div>
     </div>
