@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
+import Reveal from "@/components/Reveal";
+import RevealHeading from "@/components/RevealHeading";
 
 const projects = [
   {
@@ -34,75 +36,86 @@ const projects = [
   },
 ];
 
-const ProjectsSection = () => (
-  <section id="products" className="py-24 px-6 lg:px-16 bg-background">
-    <div className="container mx-auto max-w-6xl">
-      <div className="inline-flex items-center gap-3 mb-10">
-        <span className="w-9 h-9 rounded-full bg-foreground/10 flex items-center justify-center">
-          <span className="w-3 h-3 rounded-full bg-foreground" />
-        </span>
-        <h2 className="text-3xl lg:text-4xl font-extrabold tracking-tight">Projects</h2>
-      </div>
+const ProjectsSection = () => {
+  return (
+    <section id="products" className="py-24 px-6 lg:px-16 bg-background">
+      <div className="container mx-auto max-w-6xl">
+        <RevealHeading title="Projects" />
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-        {projects.map((p) => {
-          const Card = (
-            <article className="group h-full flex flex-col bg-card rounded-2xl border border-border overflow-hidden hover:-translate-y-1 hover:shadow-[var(--shadow-soft)] transition-all">
-              {/* Header strip */}
-              <div className="bg-foreground text-background px-5 py-4 flex items-center justify-between">
-                <h3 className="text-lg font-bold">{p.name}</h3>
-                {p.path && (
-                  <ArrowUpRight
-                    size={18}
-                    className="opacity-70 group-hover:opacity-100 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all"
-                  />
-                )}
-              </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {projects.map((p, idx) => {
+            const Card = (
+              <article className="group relative h-full flex flex-col bg-card rounded-2xl border border-border overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_60px_-20px_hsl(var(--orange)/0.45)] hover:border-[hsl(var(--orange)/0.5)]">
+                {/* Glow gradient on hover */}
+                <div className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-[hsl(var(--orange)/0.08)] via-transparent to-[hsl(var(--magenta)/0.08)]" />
 
-              {/* Image / icon area */}
-              <div className="aspect-[16/10] bg-muted/40 flex items-center justify-center text-7xl">
-                {p.icon}
-              </div>
-
-              <div className="p-5 flex-1 flex flex-col">
-                <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-2">
-                  Date: <span className="text-foreground font-medium normal-case">{p.date}</span>
-                </p>
-                <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-3">
-                  Technologies:{" "}
-                  <span className="text-foreground font-medium normal-case">
-                    {p.technologies.join(", ")}
-                  </span>
-                </p>
-                <p className="text-sm text-foreground/80 leading-relaxed mb-5 flex-1">
-                  {p.description}
-                </p>
-                <div
-                  className={
-                    p.path
-                      ? "px-4 py-2.5 rounded-lg bg-foreground text-background text-sm font-semibold text-center group-hover:bg-foreground/85 transition-colors"
-                      : "px-4 py-2.5 rounded-lg bg-muted text-muted-foreground text-sm font-medium text-center"
-                  }
-                >
-                  {p.cta}
+                {/* Header strip */}
+                <div className="relative bg-foreground text-background px-5 py-4 flex items-center justify-between overflow-hidden">
+                  <h3 className="text-lg font-bold">{p.name}</h3>
+                  {p.path && (
+                    <ArrowUpRight
+                      size={18}
+                      className="opacity-70 group-hover:opacity-100 group-hover:-translate-y-1 group-hover:translate-x-1 transition-all duration-300"
+                    />
+                  )}
+                  {/* Shimmer */}
+                  <div className="pointer-events-none absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/15 to-transparent" />
                 </div>
-              </div>
-            </article>
-          );
 
-          return p.path ? (
-            <Link key={p.name} to={p.path} className="block h-full">
-              {Card}
-            </Link>
-          ) : (
-            <div key={p.name} className="h-full">
-              {Card}
-            </div>
-          );
-        })}
+                {/* Image / icon area */}
+                <div className="relative aspect-[16/10] bg-muted/40 flex items-center justify-center text-7xl transition-transform duration-500 group-hover:scale-110">
+                  <span className="transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6 inline-block">
+                    {p.icon}
+                  </span>
+                </div>
+
+                <div className="relative p-5 flex-1 flex flex-col">
+                  <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-2">
+                    Date: <span className="text-foreground font-medium normal-case">{p.date}</span>
+                  </p>
+                  <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-3">
+                    Technologies:{" "}
+                    <span className="text-foreground font-medium normal-case">
+                      {p.technologies.join(", ")}
+                    </span>
+                  </p>
+                  <p className="text-sm text-foreground/80 leading-relaxed mb-5 flex-1">
+                    {p.description}
+                  </p>
+                  <div
+                    className={
+                      p.path
+                        ? "px-4 py-2.5 rounded-lg bg-foreground text-background text-sm font-semibold text-center transition-all group-hover:bg-[image:var(--gradient-sunset)] group-hover:shadow-[0_8px_24px_-8px_hsl(var(--orange)/0.7)]"
+                        : "px-4 py-2.5 rounded-lg bg-muted text-muted-foreground text-sm font-medium text-center"
+                    }
+                  >
+                    {p.cta}
+                  </div>
+                </div>
+              </article>
+            );
+
+            return (
+              <Reveal
+                key={p.name}
+                animation="fade-in"
+                delay={idx * 120}
+                className="h-full"
+              >
+                {p.path ? (
+                  <Link to={p.path} className="block h-full">
+                    {Card}
+                  </Link>
+                ) : (
+                  <div className="h-full">{Card}</div>
+                )}
+              </Reveal>
+            );
+          })}
+        </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default ProjectsSection;

@@ -1,34 +1,31 @@
 import premPhoto from "@/assets/prem-sunset-photo.jpg";
+import Reveal from "@/components/Reveal";
+import RevealHeading from "@/components/RevealHeading";
 
 const BiographySection = () => (
   <section id="about" className="py-24 px-6 lg:px-16 bg-muted/40">
     <div className="container mx-auto max-w-6xl">
       <div className="grid lg:grid-cols-[auto_1fr] gap-12 lg:gap-16 items-start">
         {/* Left: original photo */}
-        <div className="flex flex-col items-center text-center">
-          <div className="relative">
-            <div className="absolute inset-0 rounded-full bg-foreground/10 blur-2xl scale-110" aria-hidden />
-            <div className="relative w-64 h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border-4 border-foreground shadow-[var(--shadow-glow)] bg-card">
+        <Reveal animation="fade-in-left" className="flex flex-col items-center text-center">
+          <div className="relative group">
+            <div className="absolute inset-0 rounded-full bg-[image:var(--gradient-sunset)] opacity-30 blur-3xl scale-110 animate-pulse-scale" aria-hidden />
+            <div className="relative w-64 h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border-4 border-foreground shadow-[var(--shadow-glow)] bg-card transition-transform duration-500 group-hover:scale-105 group-hover:rotate-2">
               <img
                 src={premPhoto}
                 alt="Prem Joshi"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 loading="lazy"
               />
             </div>
           </div>
           <p className="mt-6 text-sm font-medium text-muted-foreground">Product Manager — Cloud / AI-ML</p>
           <h3 className="text-2xl lg:text-3xl font-extrabold mt-1">Prem Joshi</h3>
-        </div>
+        </Reveal>
 
         {/* Right: biography text */}
-        <div>
-          <div className="inline-flex items-center gap-3 mb-5">
-            <span className="w-9 h-9 rounded-full bg-foreground/10 flex items-center justify-center">
-              <span className="w-3 h-3 rounded-full bg-foreground" />
-            </span>
-            <h2 className="text-3xl lg:text-4xl font-extrabold tracking-tight">Biography</h2>
-          </div>
+        <Reveal animation="fade-in-right" delay={150}>
+          <RevealHeading title="Biography" />
 
           <div className="space-y-4 text-foreground/80 leading-relaxed">
             <p>
@@ -39,7 +36,7 @@ const BiographySection = () => (
               high-performance mindset as a professional soccer player.
             </p>
           </div>
-        </div>
+        </Reveal>
       </div>
     </div>
   </section>
