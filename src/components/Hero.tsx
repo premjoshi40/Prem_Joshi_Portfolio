@@ -9,17 +9,8 @@ const Hero = () => {
       id="home"
       className="relative min-h-screen flex items-center pt-20 lg:pt-0 px-6 lg:px-16 overflow-hidden"
     >
-      {/* Vibrant background depth — animated blobs */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-background via-background to-muted/40" />
-      <div className="absolute top-1/4 -right-32 w-[28rem] h-[28rem] rounded-full bg-[hsl(var(--orange)/0.18)] blur-3xl -z-10 animate-float-slow" />
-      <div
-        className="absolute bottom-1/4 -left-32 w-[26rem] h-[26rem] rounded-full bg-[hsl(var(--violet)/0.18)] blur-3xl -z-10 animate-float-slow"
-        style={{ animationDelay: "1.5s" }}
-      />
-      <div
-        className="absolute top-1/2 left-1/3 w-72 h-72 rounded-full bg-[hsl(var(--magenta)/0.12)] blur-3xl -z-10 animate-float"
-        style={{ animationDelay: "0.8s" }}
-      />
+      {/* Subtle background */}
+      <div className="absolute inset-0 -z-10 bg-background" />
 
       <div className="container mx-auto max-w-7xl py-20 lg:py-28">
         <div className="grid lg:grid-cols-[1.3fr_1fr] gap-12 lg:gap-16 items-center">
@@ -86,7 +77,7 @@ const Hero = () => {
           {/* Right: Real photo */}
           <Reveal animation="fade-in-right" className="flex flex-col items-center text-center order-1 lg:order-2">
             <div className="relative">
-              <div className="relative w-64 h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-foreground/20 shadow-lg bg-card">
+              <div className="relative w-64 h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden border-2 border-border shadow-sm bg-card">
                 <img
                   src={premPhoto}
                   alt="Prem Joshi"
@@ -94,7 +85,7 @@ const Hero = () => {
                   loading="eager"
                 />
               </div>
-              <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-foreground text-white px-4 py-2 rounded-xl shadow-md flex items-center gap-2 text-xs font-semibold whitespace-nowrap">
+              <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-foreground text-white px-4 py-2 rounded-lg shadow-sm flex items-center gap-2 text-xs font-semibold whitespace-nowrap">
                 <span className="w-2 h-2 rounded-full bg-green-400" />
                 Open to opportunities
               </div>
