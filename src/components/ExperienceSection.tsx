@@ -2,43 +2,14 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const experiences = [
-  {
-    role: "Product Manager — Risk GPT",
-    company: "EY (Ernst & Young)",
-    type: "Full Time · Hybrid",
-    period: "2022 – Present",
-    logo: "EY",
-    description: [
-      "Lead product strategy for Risk GPT, an AI-powered risk intelligence platform automating cybersecurity audit workflows across global regions.",
-      "Delivered a 70% efficiency gain, $8.5M+ annual profit uplift, and 99.99% uptime — proving the business value of automation and intelligent design at enterprise scale.",
-      "Partner cross-functionally with engineering, design, and audit SMEs to ship LLM-driven workflows.",
-    ],
-  },
-  {
-    role: "Founder & Builder",
-    company: "Auralis & AMUSE",
-    type: "Side Projects",
-    period: "2023 – Present",
-    logo: "AU",
-    description: [
-      "Auralis: AI chatbot for natural-language document retrieval. Projected up to 80% faster retrieval and 2× productivity gains.",
-      "AMUSE: AR/VR museum experience platform. Projected 3× higher visitor engagement and 40% improved satisfaction.",
-    ],
-  },
-  {
-    role: "Software Developer",
-    company: "Multiple Enterprises",
-    type: "Full Time",
-    period: "2018 – 2022",
-    logo: "SD",
-    description: [
-      "Built enterprise apps including an adhesives e-commerce platform, Vodafone mPower, and a high-traffic site for one of India's largest electronics retailers.",
-      "Drove $1.2M annual cloud cost savings and 45% performance improvements through multi-tenant AWS scaling.",
-      "Mentored 12+ engineers, lifting team productivity by 30% through better process and ownership models.",
-    ],
-  },
-];
+const experiences: {
+  role: string;
+  company: string;
+  type: string;
+  period: string;
+  logo: string;
+  description: string[];
+}[] = [];
 
 const ExperienceSection = () => {
   const [open, setOpen] = useState<number | null>(0);

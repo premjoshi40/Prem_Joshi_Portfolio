@@ -2,36 +2,14 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const education = [
-  {
-    school: "Master's — Information Systems / Product Management",
-    degree: "Education: Master's Degree",
-    detail: "Specialization in Product Management & Cloud Computing",
-    period: "2020 – 2022",
-    logo: "MS",
-    coursework: [
-      "Product Management",
-      "Cloud Computing & AWS",
-      "Data Analytics & Visualization",
-      "Software Architecture",
-      "Agile & Scrum Methodologies",
-    ],
-  },
-  {
-    school: "Bachelor's — Electronics & Telecommunications Engineering",
-    degree: "Education: Bachelor of Engineering",
-    detail: "Foundation in systems thinking, signals, and software development",
-    period: "2014 – 2018",
-    logo: "BE",
-    coursework: [
-      "Data Structures & Algorithms",
-      "Object-Oriented Programming (Java)",
-      "Computer Networks",
-      "Database Management Systems",
-      "Embedded Systems",
-    ],
-  },
-];
+const education: {
+  school: string;
+  degree: string;
+  detail: string;
+  period: string;
+  logo: string;
+  coursework: string[];
+}[] = [];
 
 const EducationSection = () => {
   const [open, setOpen] = useState<number | null>(null);

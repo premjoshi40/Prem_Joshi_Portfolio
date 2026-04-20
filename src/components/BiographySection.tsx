@@ -34,30 +34,8 @@ const BiographySection = () => (
           </div>
 
           <div className="space-y-4 text-foreground/80 leading-relaxed">
-            <p>
-              I'm a Product Manager and technologist with 6+ years of experience launching and
-              scaling AI-driven, B2B SaaS, and cloud platform products. My foundation in
-              electronics engineering and software development lets me partner deeply with
-              engineering teams while staying focused on user and business outcomes.
-            </p>
-            <p>
-              Currently leading product strategy for <strong className="text-foreground">Risk GPT</strong>{" "}
-              at EY, an AI-powered risk intelligence platform automating cybersecurity audit
-              workflows globally — delivering measurable efficiency, cost, and uptime wins at
-              enterprise scale.
-            </p>
+            <p className="text-muted-foreground italic">Bio coming soon.</p>
           </div>
-
-          <ul className="mt-6 space-y-2 text-foreground/80">
-            <li className="flex gap-3">
-              <span className="mt-2 w-1.5 h-1.5 rounded-full bg-foreground flex-shrink-0" />
-              Building <strong className="text-foreground ml-1">Auralis</strong> & <strong className="text-foreground">AMUSE</strong> — AI + AR/VR products
-            </li>
-            <li className="flex gap-3">
-              <span className="mt-2 w-1.5 h-1.5 rounded-full bg-foreground flex-shrink-0" />
-              Lifelong soccer player, semi-pro, and Manchester United fan
-            </li>
-          </ul>
 
           <div className="mt-8 grid sm:grid-cols-2 gap-4">
             <a
