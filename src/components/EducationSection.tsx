@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Reveal from "@/components/Reveal";
+import RevealHeading from "@/components/RevealHeading";
 
 const education: {
   school: string;
@@ -17,12 +19,7 @@ const EducationSection = () => {
   return (
     <section id="education" className="py-24 px-6 lg:px-16 bg-muted/40">
       <div className="container mx-auto max-w-5xl">
-        <div className="inline-flex items-center gap-3 mb-10">
-          <span className="w-9 h-9 rounded-full bg-foreground/10 flex items-center justify-center">
-            <span className="w-3 h-3 rounded-full bg-foreground" />
-          </span>
-          <h2 className="text-3xl lg:text-4xl font-extrabold tracking-tight">Education</h2>
-        </div>
+        <RevealHeading title="Education" />
 
         {education.length === 0 && (
           <p className="text-muted-foreground italic">Education details coming soon.</p>
