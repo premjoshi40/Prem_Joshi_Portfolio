@@ -2,36 +2,14 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const education = [
-  {
-    school: "Master's — Information Systems / Product Management",
-    degree: "Education: Master's Degree",
-    detail: "Specialization in Product Management & Cloud Computing",
-    period: "2020 – 2022",
-    logo: "MS",
-    coursework: [
-      "Product Management",
-      "Cloud Computing & AWS",
-      "Data Analytics & Visualization",
-      "Software Architecture",
-      "Agile & Scrum Methodologies",
-    ],
-  },
-  {
-    school: "Bachelor's — Electronics & Telecommunications Engineering",
-    degree: "Education: Bachelor of Engineering",
-    detail: "Foundation in systems thinking, signals, and software development",
-    period: "2014 – 2018",
-    logo: "BE",
-    coursework: [
-      "Data Structures & Algorithms",
-      "Object-Oriented Programming (Java)",
-      "Computer Networks",
-      "Database Management Systems",
-      "Embedded Systems",
-    ],
-  },
-];
+const education: {
+  school: string;
+  degree: string;
+  detail: string;
+  period: string;
+  logo: string;
+  coursework: string[];
+}[] = [];
 
 const EducationSection = () => {
   const [open, setOpen] = useState<number | null>(null);
@@ -45,6 +23,10 @@ const EducationSection = () => {
           </span>
           <h2 className="text-3xl lg:text-4xl font-extrabold tracking-tight">Education</h2>
         </div>
+
+        {education.length === 0 && (
+          <p className="text-muted-foreground italic">Education details coming soon.</p>
+        )}
 
         <div className="space-y-4">
           {education.map((ed, idx) => {
