@@ -32,15 +32,6 @@ const projects = [
     path: "/products/amuse",
     cta: "View Project",
   },
-  {
-    name: "Risk GPT",
-    date: "2022 – Present",
-    description:
-      "AI-powered risk intelligence platform automating cybersecurity audit workflows globally. Delivered 70% efficiency gain, $8.5M+ profit uplift, 99.99% uptime.",
-    technologies: ["LLMs", "Enterprise AI", "Audit Automation", "AWS"],
-    icon: "🛡️",
-    cta: "Internal — contact for details",
-  },
 ];
 
 const ProjectsSection = () => (
