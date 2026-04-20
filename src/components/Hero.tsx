@@ -86,11 +86,11 @@ const Hero = () => {
           {/* Right: 3D Avatar */}
           <div className="relative flex justify-center order-1 lg:order-2">
             <div className="relative w-full max-w-[480px] aspect-square">
-              {/* Layered depth blobs */}
-              <div className="absolute inset-0 rounded-[3rem] bg-gradient-to-br from-muted to-muted/40 rotate-3 shadow-[0_30px_60px_-20px_hsl(var(--foreground)/0.25)]" />
-              <div className="absolute inset-0 rounded-[3rem] bg-gradient-to-tl from-card to-background -rotate-2 border border-border shadow-[0_20px_50px_-15px_hsl(var(--foreground)/0.2)]" />
+              {/* Layered depth blobs with sunset accents */}
+              <div className="absolute inset-0 rounded-[3rem] bg-[image:var(--gradient-sunset)] rotate-3 shadow-[var(--shadow-glow)]" />
+              <div className="absolute inset-0 rounded-[3rem] bg-card -rotate-2 border border-border shadow-[var(--shadow-soft)]" />
               {/* Avatar */}
-              <div className="relative w-full h-full rounded-[3rem] overflow-hidden bg-gradient-to-b from-muted/30 to-background flex items-end justify-center">
+              <div className="relative w-full h-full rounded-[3rem] overflow-hidden bg-gradient-to-b from-[hsl(var(--orange)/0.08)] via-[hsl(var(--magenta)/0.06)] to-background flex items-end justify-center">
                 <img
                   src={premAvatar}
                   alt="Prem Joshi - 3D illustrated avatar"
@@ -100,8 +100,8 @@ const Hero = () => {
                 />
               </div>
               {/* Floating badge */}
-              <div className="absolute -bottom-4 -left-4 bg-foreground text-background px-4 py-2.5 rounded-xl shadow-xl flex items-center gap-2 text-sm font-semibold">
-                <span className="w-2 h-2 rounded-full bg-[hsl(var(--lime))] animate-pulse" />
+              <div className="absolute -bottom-4 -left-4 bg-[image:var(--gradient-warm)] text-white px-4 py-2.5 rounded-xl shadow-[var(--shadow-glow)] flex items-center gap-2 text-sm font-semibold">
+                <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
                 Open to opportunities
               </div>
             </div>
