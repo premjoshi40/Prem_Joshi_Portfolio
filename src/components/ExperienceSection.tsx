@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
-import eyLogo from "@/assets/ey-logo.png";
+import eyLogo from "@/assets/ey-logo.webp";
 
 const experiences: {
   role: string;
