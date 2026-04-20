@@ -85,21 +85,17 @@ const Hero = () => {
 
           {/* Right: Real photo */}
           <Reveal animation="fade-in-right" className="flex flex-col items-center text-center order-1 lg:order-2">
-            <div className="relative group">
-              <div
-                className="absolute inset-0 rounded-full bg-[image:var(--gradient-sunset)] opacity-30 blur-3xl scale-110 animate-pulse-scale"
-                aria-hidden
-              />
-              <div className="relative w-64 h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-foreground shadow-[var(--shadow-glow)] bg-card transition-transform duration-500 group-hover:scale-105 group-hover:rotate-2">
+            <div className="relative">
+              <div className="relative w-64 h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-foreground/20 shadow-lg bg-card">
                 <img
                   src={premPhoto}
                   alt="Prem Joshi"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-cover"
                   loading="eager"
                 />
               </div>
-              <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-[image:var(--gradient-warm)] text-white px-4 py-2 rounded-xl shadow-[var(--shadow-glow)] flex items-center gap-2 text-xs font-semibold animate-bounce-subtle whitespace-nowrap">
-                <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
+              <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-foreground text-white px-4 py-2 rounded-xl shadow-md flex items-center gap-2 text-xs font-semibold whitespace-nowrap">
+                <span className="w-2 h-2 rounded-full bg-green-400" />
                 Open to opportunities
               </div>
             </div>
