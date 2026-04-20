@@ -25,7 +25,7 @@ const ContactSection = () => (
   <section id="contact" className="py-24 px-6 lg:px-16 bg-muted/30">
     <div className="container mx-auto max-w-5xl">
       <div className="text-center mb-14">
-        <p className="text-sm font-medium text-muted-foreground tracking-wide uppercase mb-3">
+        <p className="inline-block text-sm font-semibold tracking-wide uppercase mb-3 bg-[image:var(--gradient-sunset)] bg-clip-text text-transparent">
           Let's build something
         </p>
         <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight">
