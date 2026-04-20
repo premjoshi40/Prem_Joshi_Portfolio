@@ -8,40 +8,50 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 98%;
-    --foreground: 0 0% 10%;
+    --background: 0 0% 99%;
+    --foreground: 240 15% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 10%;
+    --card-foreground: 240 15% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
+    --popover-foreground: 240 15% 12%;
 
-    --primary: 0 0% 10%;
-    --primary-foreground: 0 0% 98%;
-    
-    --primary-glow: 0 0% 20%;
+    /* Sunset Blaze accents */
+    --primary: 16 100% 60%;          /* #ff6b35 orange */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 32 94% 54%;      /* #f7931e amber */
 
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 10%;
+    --secondary: 240 10% 96%;
+    --secondary-foreground: 240 15% 12%;
 
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 240 10% 96%;
+    --muted-foreground: 240 8% 42%;
 
-    --accent: 0 0% 10%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 330 79% 58%;           /* #e84393 magenta */
+    --accent-foreground: 0 0% 100%;
+
+    --violet: 252 75% 65%;           /* #6c5ce7 violet */
+    --magenta: 330 79% 58%;
+    --orange: 16 100% 60%;
+    --amber: 32 94% 54%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 0 0% 10%;
+    --border: 240 10% 90%;
+    --input: 240 10% 90%;
+    --ring: 16 100% 60%;
 
-    --radius: 0.5rem;
-    
+    --radius: 0.75rem;
+
+    --gradient-sunset: linear-gradient(135deg, hsl(16 100% 60%), hsl(330 79% 58%) 55%, hsl(252 75% 65%));
+    --gradient-warm: linear-gradient(135deg, hsl(16 100% 60%), hsl(32 94% 54%));
+    --gradient-cool: linear-gradient(135deg, hsl(330 79% 58%), hsl(252 75% 65%));
+    --shadow-glow: 0 20px 60px -20px hsl(16 100% 60% / 0.45);
+    --shadow-soft: 0 12px 30px -12px hsl(252 75% 65% / 0.25);
+
     --lime: 84 81% 67%;
-    --orange: 25 95% 53%;
     --cyan: 187 85% 70%;
     --gray-btn: 0 0% 75%;
 
