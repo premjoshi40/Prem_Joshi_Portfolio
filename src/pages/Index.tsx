@@ -1,7 +1,6 @@
 import SideRail from "@/components/SideRail";
 import SocialBar from "@/components/SocialBar";
 import Hero from "@/components/Hero";
-import BiographySection from "@/components/BiographySection";
 import CertificationsSection from "@/components/CertificationsSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import SkillsSection from "@/components/SkillsSection";
