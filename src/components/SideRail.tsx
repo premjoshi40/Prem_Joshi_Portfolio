@@ -1,14 +1,15 @@
-import { Home, User, Sparkles, Briefcase, Package, Award, Mail, Menu, X } from "lucide-react";
+import { Home, User, Award, Briefcase, Sparkles, GraduationCap, Package, Mail, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
 const items = [
   { id: "home", label: "Home", icon: Home },
-  { id: "about", label: "About", icon: User },
-  { id: "skills", label: "Skills", icon: Sparkles },
-  { id: "experience", label: "Experience", icon: Briefcase },
-  { id: "products", label: "Products", icon: Package },
+  { id: "about", label: "Biography", icon: User },
   { id: "certifications", label: "Certifications", icon: Award },
+  { id: "experience", label: "Experience", icon: Briefcase },
+  { id: "skills", label: "Skills", icon: Sparkles },
+  { id: "education", label: "Education", icon: GraduationCap },
+  { id: "products", label: "Projects", icon: Package },
   { id: "contact", label: "Contact", icon: Mail },
 ];
 
