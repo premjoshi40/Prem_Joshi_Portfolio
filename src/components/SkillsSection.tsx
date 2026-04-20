@@ -1,30 +1,31 @@
 const groups = [
   {
-    title: "Product",
+    title: "Product Management",
     skills: [
-      "Strategy", "Roadmapping", "Discovery", "MVPs",
-      "A/B Testing", "B2B SaaS", "AI/ML Integration", "Go-to-Market",
+      "Product Strategy", "Roadmapping", "PRDs", "OKRs",
+      "Go-to-Market", "Agile", "Cross-functional Delivery",
     ],
   },
   {
-    title: "Programming Languages",
-    skills: ["Java", "Python", "JavaScript", "TypeScript", "SQL", "HTML", "CSS"],
+    title: "Technical Stack",
+    skills: [
+      "Java", "Python", "JavaScript", "SQL",
+      "NoSQL (MongoDB, DynamoDB)", "Docker", "Kubernetes", "Git", "Kafka", "Redis",
+    ],
   },
   {
-    title: "Cloud & Infrastructure",
-    skills: ["AWS", "GCP", "Docker", "Kubernetes", "Terraform", "CI/CD Pipelines", "Serverless"],
+    title: "Cloud and DevOps",
+    skills: [
+      "Google Cloud Platform (GCP)", "AWS", "Azure", "Docker",
+      "Kubernetes", "Git", "CI/CD", "Terraform",
+    ],
   },
   {
-    title: "AI / ML",
-    skills: ["LLMs", "Prompt Engineering", "RAG", "Semantic Search", "Vector DBs", "Model Evaluation"],
-  },
-  {
-    title: "Frameworks & Tools",
-    skills: ["React", "Node.js", "Spring Boot", "REST APIs", "GraphQL", "Git", "Linux"],
-  },
-  {
-    title: "Analytics",
-    skills: ["Mixpanel", "Amplitude", "SQL Analytics", "KPI Tracking", "Experiment Design", "Data Viz"],
+    title: "Artificial Intelligence",
+    skills: [
+      "Gen-AI", "RAG", "LLMs", "Vector Databases & Embeddings",
+      "MLOps", "Prompt Engineering", "Big Data Analytics",
+    ],
   },
 ];
 

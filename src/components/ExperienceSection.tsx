@@ -9,7 +9,32 @@ const experiences: {
   period: string;
   logo: string;
   description: string[];
-}[] = [];
+}[] = [
+  {
+    role: "Product Manager (Senior 3)",
+    company: "EY (Ernst & Young)",
+    type: "Full-time",
+    period: "Sep 2022 — Present",
+    logo: "EY",
+    description: [],
+  },
+  {
+    role: "Product Manager",
+    company: "Mobicule Technologies",
+    type: "Full-time",
+    period: "Aug 2019 — Aug 2021",
+    logo: "MT",
+    description: [],
+  },
+  {
+    role: "Software Developer",
+    company: "Mobicule Technologies",
+    type: "Full-time",
+    period: "Jun 2018 — Aug 2019",
+    logo: "MT",
+    description: [],
+  },
+];
 
 const ExperienceSection = () => {
   const [open, setOpen] = useState<number | null>(0);
