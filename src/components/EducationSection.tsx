@@ -1,7 +1,3 @@
-import { useState } from "react";
-import { ChevronDown } from "lucide-react";
-import { cn } from "@/lib/utils";
-import Reveal from "@/components/Reveal";
 import RevealHeading from "@/components/RevealHeading";
 import ubLogo from "@/assets/ub-logo.webp";
 import sppuLogo from "@/assets/sppu-logo.webp";
@@ -33,8 +29,6 @@ const education: {
 ];
 
 const EducationSection = () => {
-  const [open, setOpen] = useState<number | null>(null);
-
   return (
     <section id="education" className="py-24 px-6 lg:px-16 bg-muted/40">
       <div className="container mx-auto max-w-5xl">
@@ -45,8 +39,7 @@ const EducationSection = () => {
         )}
 
         <div className="space-y-4">
-          {education.map((ed, idx) => {
-            const isOpen = open === idx;
+          {education.map((ed) => {
             return (
               <div
                 key={ed.school}
