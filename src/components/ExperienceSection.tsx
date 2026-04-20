@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import eyLogo from "@/assets/ey-logo.webp";
+import mobiculeLogo from "@/assets/mobicule-logo.jpg";
 import Reveal from "@/components/Reveal";
 import RevealHeading from "@/components/RevealHeading";
 
@@ -29,6 +30,7 @@ const experiences: {
     type: "Full-time",
     period: "Aug 2019 — Aug 2021",
     logo: "MT",
+    logoImage: mobiculeLogo,
     description: [],
   },
   {
@@ -37,6 +39,7 @@ const experiences: {
     type: "Full-time",
     period: "Jun 2018 — Aug 2019",
     logo: "MT",
+    logoImage: mobiculeLogo,
     description: [],
   },
 ];
