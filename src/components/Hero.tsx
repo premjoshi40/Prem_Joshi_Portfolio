@@ -1,4 +1,4 @@
-import premAvatar from "@/assets/avatar-option-3.png";
+import premAvatar from "@/assets/avatar-pixar-blazer.png";
 import { Download } from "lucide-react";
 
 const Hero = () => {
