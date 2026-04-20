@@ -1,6 +1,5 @@
 import premAvatar from "@/assets/avatar-option-3.png";
-import { Download, ArrowRight } from "lucide-react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Download } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -29,12 +28,6 @@ const Hero = () => {
               Product Manager — Cloud / AI-ML
             </p>
 
-            <p className="text-base text-muted-foreground leading-relaxed max-w-xl">
-              Product Manager and builder with 6+ years of experience launching and scaling
-              AI-driven, B2B SaaS, and cloud platform products. I thrive at the intersection
-              of strategy and execution — taking ideas from concept to launch and beyond.
-            </p>
-
             <div className="flex flex-wrap gap-3 pt-2">
               <button
                 onClick={() =>
@@ -45,23 +38,6 @@ const Hero = () => {
                 <Download size={16} />
                 Download Resume
               </button>
-
-              <Dialog>
-                <DialogTrigger asChild>
-                  <button className="group border border-border bg-card text-foreground font-semibold px-6 py-3.5 rounded-xl hover:border-primary hover:text-primary hover:-translate-y-0.5 transition-all flex items-center gap-2">
-                    More About Me
-                    <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-                  </button>
-                </DialogTrigger>
-                <DialogContent className="max-w-lg">
-                  <DialogHeader>
-                    <DialogTitle className="text-2xl font-bold">More About Me</DialogTitle>
-                  </DialogHeader>
-                  <div className="py-6 text-center text-muted-foreground">
-                    <p>Fresh content for this section is on the way. ✨</p>
-                  </div>
-                </DialogContent>
-              </Dialog>
             </div>
           </div>
 
