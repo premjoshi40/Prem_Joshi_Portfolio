@@ -61,35 +61,6 @@ const EducationSection = () => {
                     <p className="text-sm font-semibold text-foreground/80 mt-1">{ed.degree}</p>
                     <p className="text-sm text-muted-foreground mt-1">{ed.detail}</p>
                     <p className="text-sm text-muted-foreground">{ed.period}</p>
-                    <button
-                      onClick={() => setOpen(isOpen ? null : idx)}
-                      className="inline-flex items-center gap-1.5 mt-3 px-3.5 py-1.5 rounded-lg bg-foreground text-background text-xs font-semibold hover:bg-foreground/85 transition-colors"
-                    >
-                      {isOpen ? "Hide" : "Show"} Relevant Coursework
-                      <ChevronDown
-                        size={14}
-                        className={cn("transition-transform", isOpen && "rotate-180")}
-                      />
-                    </button>
-                  </div>
-                </div>
-                <div
-                  className={cn(
-                    "grid transition-all duration-300 ease-in-out",
-                    isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
-                  )}
-                >
-                  <div className="overflow-hidden">
-                    <div className="px-5 pb-5 pl-24 flex flex-wrap gap-2">
-                      {ed.coursework.map((c) => (
-                        <span
-                          key={c}
-                          className="px-3 py-1.5 rounded-lg bg-muted text-foreground/85 text-sm font-medium border border-border"
-                        >
-                          {c}
-                        </span>
-                      ))}
-                    </div>
                   </div>
                 </div>
               </div>
