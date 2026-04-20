@@ -13,7 +13,7 @@ const Hero = () => {
       <div className="absolute inset-0 -z-10 bg-background" />
 
       <div className="container mx-auto max-w-7xl py-20 lg:py-28">
-        <div className="grid lg:grid-cols-[1.3fr_1fr] gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-[1fr_1fr] gap-12 lg:gap-20 items-center">
           {/* Left: Intro + Biography */}
           <div className="space-y-7 order-2 lg:order-1">
             <p className="text-sm font-medium text-muted-foreground tracking-wide uppercase animate-fade-in">
@@ -75,9 +75,9 @@ const Hero = () => {
           </div>
 
           {/* Right: Real photo */}
-          <Reveal animation="fade-in-right" className="flex flex-col items-center text-center order-1 lg:order-2">
+          <Reveal animation="fade-in-right" className="flex justify-center lg:justify-end order-1 lg:order-2">
             <div className="relative">
-              <div className="relative w-64 h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden border-2 border-border shadow-sm bg-card">
+              <div className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-[26rem] lg:h-[26rem] rounded-full overflow-hidden border-2 border-border shadow-sm bg-card">
                 <img
                   src={premPhoto}
                   alt="Prem Joshi"
