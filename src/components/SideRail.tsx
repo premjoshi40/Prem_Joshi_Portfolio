@@ -42,7 +42,7 @@ const SideRail = () => {
     <>
       {/* Mobile top bar */}
       <div className="lg:hidden fixed top-0 left-0 right-0 z-50 flex items-center justify-between h-14 px-4 bg-background/90 backdrop-blur-md border-b border-border">
-        <div className="w-10 h-10 rounded-lg bg-foreground text-background flex items-center justify-center font-bold text-sm shadow-lg">
+        <div className="w-10 h-10 rounded-lg bg-[image:var(--gradient-sunset)] text-white flex items-center justify-center font-bold text-sm shadow-[var(--shadow-glow)]">
           PJ
         </div>
         <button
@@ -68,7 +68,7 @@ const SideRail = () => {
                   className={cn(
                     "flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-colors",
                     isActive
-                      ? "bg-foreground text-background"
+                      ? "bg-[image:var(--gradient-sunset)] text-white shadow-[var(--shadow-glow)]"
                       : "text-foreground/70 hover:bg-muted"
                   )}
                 >
@@ -86,7 +86,7 @@ const SideRail = () => {
         {/* Logo */}
         <button
           onClick={() => handleClick("home")}
-          className="w-12 h-12 rounded-xl bg-foreground text-background flex items-center justify-center font-bold text-base mb-10 shadow-[0_8px_24px_-8px_hsl(var(--foreground)/0.5)] hover:scale-105 transition-transform"
+          className="w-12 h-12 rounded-xl bg-[image:var(--gradient-sunset)] text-white flex items-center justify-center font-bold text-base mb-10 shadow-[var(--shadow-glow)] hover:scale-105 transition-transform"
           aria-label="Home"
         >
           PJ
@@ -104,7 +104,7 @@ const SideRail = () => {
                 className={cn(
                   "group relative w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-200",
                   isActive
-                    ? "bg-foreground text-background shadow-[0_8px_20px_-8px_hsl(var(--foreground)/0.6)]"
+                    ? "bg-[image:var(--gradient-sunset)] text-white shadow-[var(--shadow-glow)]"
                     : "text-foreground/50 hover:text-foreground hover:bg-muted"
                 )}
                 aria-label={item.label}

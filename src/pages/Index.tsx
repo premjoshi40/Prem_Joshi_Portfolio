@@ -1,9 +1,8 @@
 import SideRail from "@/components/SideRail";
 import SocialBar from "@/components/SocialBar";
 import Hero from "@/components/Hero";
-import AboutSection from "@/components/AboutSection";
+import Placeholder from "@/components/Placeholder";
 import SkillsSection from "@/components/SkillsSection";
-import ExperienceSection from "@/components/ExperienceSection";
 import ProductsSection from "@/components/ProductsSection";
 import CertificationsSection from "@/components/CertificationsSection";
 import ContactSection from "@/components/ContactSection";
@@ -16,9 +15,9 @@ const Index = () => {
       <SocialBar />
       <main className="lg:pl-20">
         <Hero />
-        <AboutSection />
+        <Placeholder id="about" eyebrow="About me" title="A new story is on the way" />
         <SkillsSection />
-        <ExperienceSection />
+        <Placeholder id="experience" eyebrow="Experience" title="Refreshed timeline arriving soon" />
         <div id="products">
           <ProductsSection />
         </div>
