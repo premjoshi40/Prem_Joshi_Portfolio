@@ -31,7 +31,13 @@ const BiographySection = () => (
           </div>
 
           <div className="space-y-4 text-foreground/80 leading-relaxed">
-            <p className="text-muted-foreground italic">Bio coming soon.</p>
+            <p>
+              Go-getter, customer-first Product Manager with 6+ years of experience leveraging an
+              engineering foundation to build and scale cloud, SaaS, and AI/ML products from
+              conception to launch through cross-functional collaboration while translating complex
+              problems into actionable decisions that deliver customer value. Bringing a
+              high-performance mindset as a professional soccer player.
+            </p>
           </div>
         </div>
       </div>
