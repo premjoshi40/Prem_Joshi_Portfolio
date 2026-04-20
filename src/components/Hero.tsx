@@ -6,10 +6,11 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-20 lg:pt-0 px-6 lg:px-16 overflow-hidden">
-      {/* Subtle background depth */}
+      {/* Vibrant background depth */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-background via-background to-muted/40" />
-      <div className="absolute top-1/4 -right-32 w-96 h-96 rounded-full bg-foreground/5 blur-3xl -z-10" />
-      <div className="absolute bottom-1/4 -left-32 w-80 h-80 rounded-full bg-foreground/5 blur-3xl -z-10" />
+      <div className="absolute top-1/4 -right-32 w-[28rem] h-[28rem] rounded-full bg-[hsl(var(--orange)/0.18)] blur-3xl -z-10" />
+      <div className="absolute bottom-1/4 -left-32 w-[26rem] h-[26rem] rounded-full bg-[hsl(var(--violet)/0.18)] blur-3xl -z-10" />
+      <div className="absolute top-1/2 left-1/3 w-72 h-72 rounded-full bg-[hsl(var(--magenta)/0.12)] blur-3xl -z-10" />
 
       <div className="container mx-auto max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
