@@ -53,8 +53,8 @@ const EducationSection = () => {
                 className="bg-card rounded-2xl border border-border overflow-hidden hover:shadow-[var(--shadow-soft)] transition-all"
               >
                 <div className="flex items-start gap-5 p-5">
-                  <div className="w-14 h-14 flex-shrink-0 rounded-xl bg-foreground text-background font-bold flex items-center justify-center text-base">
-                    {ed.logo}
+                  <div className="w-14 h-14 flex-shrink-0 rounded-xl overflow-hidden border border-border bg-card flex items-center justify-center">
+                    <img src={ed.logo} alt={`${ed.school} logo`} className="w-full h-full object-cover" loading="lazy" />
                   </div>
                   <div className="flex-1 min-w-0">
                     <h3 className="text-lg font-bold text-foreground">{ed.school}</h3>
