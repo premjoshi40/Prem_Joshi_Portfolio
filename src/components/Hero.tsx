@@ -1,4 +1,4 @@
-import premAvatar from "@/assets/prem-3d-avatar.png";
+import premAvatar from "@/assets/avatar-option-3.png";
 import { Download, ArrowRight } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 
