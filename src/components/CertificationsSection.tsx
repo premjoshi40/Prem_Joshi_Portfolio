@@ -102,6 +102,21 @@ const certifications: Certification[] = [
         credentialId: "skills.google/22420419",
         url: "https://www.skills.google/public_profiles/2a24faff-2e80-4fba-9f08-18b2403b80a0/badges/22420419",
       },
+      {
+        title: "Digital Leader Badge – 22420682",
+        credentialId: "skills.google/22420682",
+        url: "https://www.skills.google/public_profiles/2a24faff-2e80-4fba-9f08-18b2403b80a0/badges/22420682",
+      },
+      {
+        title: "Digital Leader Badge – 22420870",
+        credentialId: "skills.google/22420870",
+        url: "https://www.skills.google/public_profiles/2a24faff-2e80-4fba-9f08-18b2403b80a0/badges/22420870",
+      },
+      {
+        title: "Digital Leader Badge – 22420991",
+        credentialId: "skills.google/22420991",
+        url: "https://www.skills.google/public_profiles/2a24faff-2e80-4fba-9f08-18b2403b80a0/badges/22420991",
+      },
     ],
   },
 ];
