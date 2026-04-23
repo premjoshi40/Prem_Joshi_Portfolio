@@ -38,7 +38,7 @@ const experiences: {
     role: "Research Assistant",
     company: "University at Buffalo",
     type: "Part-time",
-    period: "Aug 2021 — May 2022",
+    period: "Jun 2022 — Oct 2022",
     logo: "UB",
     logoImage: ubLogo,
     description: [
