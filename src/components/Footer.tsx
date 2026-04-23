@@ -2,7 +2,7 @@ import { Mail, Github, Linkedin } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer id="contact" className="py-16 px-6 lg:px-12 border-t border-border bg-background">
+    <footer id="contact" className="scroll-mt-20 py-16 px-6 lg:px-12 border-t border-border bg-background">
       <div className="container mx-auto max-w-4xl">
         {/* Heading */}
         <div className="text-center mb-10">
