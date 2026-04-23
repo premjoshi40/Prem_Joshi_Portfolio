@@ -42,9 +42,7 @@ const experiences: {
     logo: "UB",
     logoImage: ubLogo,
     description: [
-      "Conducted graduate-level research at the University at Buffalo, contributing to data-driven studies and applied machine learning experiments under faculty mentorship.",
-      "Designed and ran empirical experiments, processed large datasets, and authored technical write-ups summarizing findings for academic review.",
-      "Collaborated with cross-disciplinary research teams to translate research questions into reproducible analyses and presentation-ready insights.",
+      "Conducted machine learning research analyzing tester behavior using large-scale test execution and defect datasets, building end-to-end pipelines for data preprocessing, feature engineering, and model training. Extracted behavioral features such as test coverage patterns, execution frequency, defect density, and time-to-detect signals, and applied supervised learning models including logistic regression, random forests, and gradient boosting to predict defect-prone areas and high-impact test cases. Evaluated models using precision-recall, F1-score, and ROC-AUC, and leveraged results to optimize test prioritization strategies, improving defect detection efficiency and overall software quality.",
     ],
   },
   {
