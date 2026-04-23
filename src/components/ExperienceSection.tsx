@@ -35,17 +35,6 @@ const experiences: {
     ],
   },
   {
-    role: "Research Assistant",
-    company: "University at Buffalo",
-    type: "Part-time",
-    period: "Jun 2022 — Oct 2022",
-    logo: "UB",
-    logoImage: ubLogo,
-    description: [
-      "Conducted machine learning research analyzing tester behavior using large-scale test execution and defect datasets, building end-to-end pipelines for data preprocessing, feature engineering, and model training. Extracted behavioral features such as test coverage patterns, execution frequency, defect density, and time-to-detect signals, and applied supervised learning models including logistic regression, random forests, and gradient boosting to predict defect-prone areas and high-impact test cases. Evaluated models using precision-recall, F1-score, and ROC-AUC, and leveraged results to optimize test prioritization strategies, improving defect detection efficiency and overall software quality.",
-    ],
-  },
-  {
     role: "Product Manager",
     company: "Mobicule Technologies",
     type: "Full-time",
@@ -68,6 +57,17 @@ const experiences: {
     description: [
       "Reduced cross-team integration time by 35% by designing and shipping reusable RESTful APIs and internal developer tooling on GCP, consumed by 3+ downstream engineering teams and accelerating delivery cycles by 2 sprint cycles.",
       "Supported 2M+ users at 99.999% uptime by architecting a cloud-native platform on GCP, building microservices, reusable libraries, and auto-scaling fault-tolerant infrastructure in Java, Spring Boot, and React.",
+    ],
+  },
+  {
+    role: "Research Assistant",
+    company: "University at Buffalo",
+    type: "Part-time",
+    period: "Jun 2022 — Oct 2022",
+    logo: "UB",
+    logoImage: ubLogo,
+    description: [
+      "Conducted machine learning research analyzing tester behavior using large-scale test execution and defect datasets, building end-to-end pipelines for data preprocessing, feature engineering, and model training. Extracted behavioral features such as test coverage patterns, execution frequency, defect density, and time-to-detect signals, and applied supervised learning models including logistic regression, random forests, and gradient boosting to predict defect-prone areas and high-impact test cases. Evaluated models using precision-recall, F1-score, and ROC-AUC, and leveraged results to optimize test prioritization strategies, improving defect detection efficiency and overall software quality.",
     ],
   },
 ];
