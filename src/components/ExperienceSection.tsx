@@ -22,7 +22,16 @@ const experiences: {
     period: "Sep 2022 — Present",
     logo: "EY",
     logoImage: eyLogo,
-    description: [],
+    description: [
+      "Delivered cloud security hardening, regulatory compliance, and performance optimization across 10+ Fortune 500 engagements; partnered with CISOs and VPs of Security to assess 25+ cloud workloads on GCP and AWS, reducing client risk posture from high to low and ensuring data sovereignty and 99.999% uptime across complex enterprise environments.",
+      "Scaled platform 3× in monthly active users by defining GCP microservices architecture (Kubernetes, Pub/Sub) and driving engineering tradeoff decisions across a 3-engineer team without reliability degradation.",
+      "Reduced infrastructure costs by 22% per active user by defining and launching a product-led AWS autoscaling strategy; drove adoption across 8 services while maintaining 99.99% uptime and enterprise SLAs.",
+      "Secured $2M+ in new ARR by delivering technical presentations to senior leadership across 7+ global enterprises; developed go-to-market strategy and aligned product narrative across sales, engineering, and marketing teams.",
+      "Drove $3.2M ARR growth on an AI-powered risk platform; owned PRD-to-OKR translation for a 5-member team, achieving 2× enterprise customer growth and 31% higher paid feature adoption across 300K+ business users.",
+      "Led product discovery for EY's internal AI-powered risk automation tool; partnered with engineering teams to translate risk workflows into data requirements and AI-training specifications, authoring 10+ domain artifacts to accelerate model development.",
+      "Owned compliance product roadmaps across 15+ clients (SOC2, ISO 27001, NIST); defined requirements and adoption strategy for Zscaler, Intune/Defender, Forescout, and SailPoint, leading teams of 5 members to achieve 100% certification success.",
+      "Improved document search accuracy by 27% by owning quality-focused AI/ML product strategy for an LLM-powered RAG feature; defined evals with 4 ML engineers to optimize vector embeddings, retrieval latency, and inference cost.",
+    ],
   },
   {
     role: "Product Manager",
@@ -31,7 +40,11 @@ const experiences: {
     period: "Aug 2019 — Aug 2021",
     logo: "MT",
     logoImage: mobiculeLogo,
-    description: [],
+    description: [
+      "Generated $1.5M in revenue at NPS 8.5 by owning end-to-end product strategy for 5 developer-facing cloud-native B2B SaaS products, taking each from 0-to-1 in a startup environment.",
+      "Drove developer adoption across open-source communities by partnering with DevRel, developer evangelists, and technical writers to validate product-market fit, surfacing requirements that directly shaped 3 major feature releases.",
+      "Reduced development time by 30% across a cross-functional engineering team by owning SDLC execution, writing 100+ developer-facing user stories and acceptance criteria using Agile methodologies.",
+    ],
   },
   {
     role: "Software Developer",
@@ -40,7 +53,10 @@ const experiences: {
     period: "Jun 2018 — Aug 2019",
     logo: "MT",
     logoImage: mobiculeLogo,
-    description: [],
+    description: [
+      "Reduced cross-team integration time by 35% by designing and shipping reusable RESTful APIs and internal developer tooling on GCP, consumed by 3+ downstream engineering teams and accelerating delivery cycles by 2 sprint cycles.",
+      "Supported 2M+ users at 99.999% uptime by architecting a cloud-native platform on GCP, building microservices, reusable libraries, and auto-scaling fault-tolerant infrastructure in Java, Spring Boot, and React.",
+    ],
   },
 ];
 
