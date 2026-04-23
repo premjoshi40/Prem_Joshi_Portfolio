@@ -65,7 +65,7 @@ const certifications = [
     url: "https://www.skills.google/public_profiles/2a24faff-2e80-4fba-9f08-18b2403b80a0/badges/22294306",
   },
   {
-    title: "Google Cloud Digital Leader Learning Path",
+    title: "Google Cloud Digital Leader",
     image: googleLogo,
     issued: "2026",
     credentialId: "skills.google/paths/9",
