@@ -5,8 +5,8 @@ const channels = [
   {
     icon: Mail,
     label: "Email",
-    value: "premjoshi40@gmail.com",
-    href: "mailto:premjoshi40@gmail.com",
+    value: "premjoshi1504@gmail.com",
+    href: "mailto:premjoshi1504@gmail.com",
   },
   {
     icon: Linkedin,
