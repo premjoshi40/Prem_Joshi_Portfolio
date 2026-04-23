@@ -2,11 +2,7 @@ import awsMlEngineer from "@/assets/aws-ml-engineer.png";
 import awsSolutionsArchitect from "@/assets/aws-solutions-architect.png";
 import awsCloudPractitioner from "@/assets/aws-cloud-practitioner.png";
 import psm1 from "@/assets/psm-1.png";
-import gcpGenaiApps from "@/assets/gcp-genai-apps.png";
-import gcpMlopsGenai from "@/assets/gcp-mlops-genai.png";
-import gcpAiInference from "@/assets/gcp-ai-inference.png";
-import gcpTpuInference from "@/assets/gcp-tpu-inference.png";
-import gcpCloudDigitalLeader from "@/assets/gcp-cloud-digital-leader.png";
+import googleLogo from "@/assets/google-logo.webp";
 import { ArrowUpRight } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import RevealHeading from "@/components/RevealHeading";
@@ -42,35 +38,35 @@ const certifications = [
   },
   {
     title: "Create Generative AI Apps on Google Cloud",
-    image: gcpGenaiApps,
+    image: googleLogo,
     issued: "2026",
     credentialId: "skills.google/22475694",
     url: "https://www.skills.google/public_profiles/2a24faff-2e80-4fba-9f08-18b2403b80a0/badges/22475694",
   },
   {
     title: "Machine Learning Operations (MLOps) for Generative AI",
-    image: gcpMlopsGenai,
+    image: googleLogo,
     issued: "2026",
     credentialId: "skills.google/22294964",
     url: "https://www.skills.google/public_profiles/2a24faff-2e80-4fba-9f08-18b2403b80a0/badges/22294964",
   },
   {
     title: "Architecting an AI Inference Stack",
-    image: gcpAiInference,
+    image: googleLogo,
     issued: "2026",
     credentialId: "skills.google/22294583",
     url: "https://www.skills.google/public_profiles/2a24faff-2e80-4fba-9f08-18b2403b80a0/badges/22294583",
   },
   {
     title: "How to Use TPUs for Inference",
-    image: gcpTpuInference,
+    image: googleLogo,
     issued: "2026",
     credentialId: "skills.google/22294306",
     url: "https://www.skills.google/public_profiles/2a24faff-2e80-4fba-9f08-18b2403b80a0/badges/22294306",
   },
   {
     title: "Google Cloud Digital Leader Learning Path",
-    image: gcpCloudDigitalLeader,
+    image: googleLogo,
     issued: "2026",
     credentialId: "skills.google/paths/9",
     url: "https://www.skills.google/paths/9",
