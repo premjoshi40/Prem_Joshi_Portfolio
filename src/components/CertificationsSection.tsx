@@ -88,32 +88,32 @@ const certifications: Certification[] = [
     url: "https://www.skills.google/paths/9",
     badges: [
       {
-        title: "Digital Leader Badge – 22418133",
+        title: "Digital Transformation with Google Cloud",
         credentialId: "skills.google/22418133",
         url: "https://www.skills.google/public_profiles/2a24faff-2e80-4fba-9f08-18b2403b80a0/badges/22418133",
       },
       {
-        title: "Digital Leader Badge – 22419733",
+        title: "Exploring Data Transformation with Google Cloud",
         credentialId: "skills.google/22419733",
         url: "https://www.skills.google/public_profiles/2a24faff-2e80-4fba-9f08-18b2403b80a0/badges/22419733",
       },
       {
-        title: "Digital Leader Badge – 22420419",
+        title: "Innovating with Google Cloud Artificial Intelligence",
         credentialId: "skills.google/22420419",
         url: "https://www.skills.google/public_profiles/2a24faff-2e80-4fba-9f08-18b2403b80a0/badges/22420419",
       },
       {
-        title: "Digital Leader Badge – 22420682",
+        title: "Modernize Infrastructure and Applications with Google Cloud",
         credentialId: "skills.google/22420682",
         url: "https://www.skills.google/public_profiles/2a24faff-2e80-4fba-9f08-18b2403b80a0/badges/22420682",
       },
       {
-        title: "Digital Leader Badge – 22420870",
+        title: "Trust and Security with Google Cloud",
         credentialId: "skills.google/22420870",
         url: "https://www.skills.google/public_profiles/2a24faff-2e80-4fba-9f08-18b2403b80a0/badges/22420870",
       },
       {
-        title: "Digital Leader Badge – 22420991",
+        title: "Scaling with Google Cloud Operations",
         credentialId: "skills.google/22420991",
         url: "https://www.skills.google/public_profiles/2a24faff-2e80-4fba-9f08-18b2403b80a0/badges/22420991",
       },
@@ -122,7 +122,7 @@ const certifications: Certification[] = [
 ];
 
 const CertificationCard = ({ cert }: { cert: Certification }) => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   const hasBadges = !!cert.badges?.length;
 
   return (
