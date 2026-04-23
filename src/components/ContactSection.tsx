@@ -24,8 +24,8 @@ const channels = [
 
 const ContactSection = () => (
   <section id="contact" className="py-24 px-6 lg:px-16 bg-muted/30">
-    <div className="container mx-auto max-w-5xl">
-      <Reveal className="text-center mb-14">
+    <div className="container mx-auto max-w-4xl">
+      <Reveal className="text-center mb-12">
         <p className="inline-block text-sm font-semibold tracking-wide uppercase mb-3 bg-[image:var(--gradient-sunset)] bg-clip-text text-transparent">
           Let's build something
         </p>
@@ -38,34 +38,33 @@ const ContactSection = () => (
         </p>
       </Reveal>
 
-      <div className="grid md:grid-cols-3 gap-5">
-        {channels.map(({ icon: Icon, label, value, href }, idx) => (
-          <Reveal key={label} animation="scale-in" delay={idx * 120}>
+      <Reveal animation="scale-in">
+        <div className="bg-card border border-border rounded-2xl divide-y divide-border overflow-hidden shadow-sm">
+          {channels.map(({ icon: Icon, label, value, href }) => (
             <a
+              key={label}
               href={href}
               target={href.startsWith("http") ? "_blank" : undefined}
               rel="noopener noreferrer"
-              className="group relative block bg-card border border-border rounded-2xl p-7 hover:-translate-y-2 hover:shadow-[0_25px_60px_-20px_hsl(var(--orange)/0.5)] hover:border-[hsl(var(--orange)/0.5)] transition-all duration-500 overflow-hidden"
+              className="group flex items-center gap-4 px-5 py-4 hover:bg-muted/50 transition-colors"
             >
-              {/* Glow */}
-              <div className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-[hsl(var(--orange)/0.08)] to-transparent" />
-              <div className="flex items-start justify-between mb-6 relative">
-                <div className="w-12 h-12 rounded-xl bg-[image:var(--gradient-sunset)] text-white flex items-center justify-center shadow-[var(--shadow-glow)] group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500">
-                  <Icon size={20} />
-                </div>
-                <ArrowUpRight
-                  size={18}
-                  className="text-muted-foreground group-hover:text-[hsl(var(--orange))] group-hover:-translate-y-1 group-hover:translate-x-1 transition-all duration-300"
-                />
+              <div className="w-10 h-10 rounded-lg bg-[hsl(var(--orange)/0.12)] text-[hsl(var(--orange))] flex items-center justify-center flex-shrink-0 group-hover:bg-[image:var(--gradient-sunset)] group-hover:text-white transition-all duration-300">
+                <Icon size={18} />
               </div>
-              <p className="text-xs font-medium text-muted-foreground uppercase tracking-wide mb-1.5 relative">
-                {label}
-              </p>
-              <p className="text-base font-semibold text-foreground break-all relative">{value}</p>
+              <div className="flex-1 min-w-0">
+                <p className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
+                  {label}
+                </p>
+                <p className="text-sm font-semibold text-foreground truncate">{value}</p>
+              </div>
+              <ArrowUpRight
+                size={18}
+                className="text-muted-foreground group-hover:text-[hsl(var(--orange))] group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all duration-300 flex-shrink-0"
+              />
             </a>
-          </Reveal>
-        ))}
-      </div>
+          ))}
+        </div>
+      </Reveal>
     </div>
   </section>
 );
