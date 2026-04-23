@@ -71,6 +71,27 @@ const certifications = [
     credentialId: "skills.google/paths/9",
     url: "https://www.skills.google/paths/9",
   },
+  {
+    title: "Google Cloud Digital Leader – Badge 22418133",
+    image: googleLogo,
+    issued: "2026",
+    credentialId: "skills.google/22418133",
+    url: "https://www.skills.google/public_profiles/2a24faff-2e80-4fba-9f08-18b2403b80a0/badges/22418133",
+  },
+  {
+    title: "Google Cloud Digital Leader – Badge 22419733",
+    image: googleLogo,
+    issued: "2026",
+    credentialId: "skills.google/22419733",
+    url: "https://www.skills.google/public_profiles/2a24faff-2e80-4fba-9f08-18b2403b80a0/badges/22419733",
+  },
+  {
+    title: "Google Cloud Digital Leader – Badge 22420419",
+    image: googleLogo,
+    issued: "2026",
+    credentialId: "skills.google/22420419",
+    url: "https://www.skills.google/public_profiles/2a24faff-2e80-4fba-9f08-18b2403b80a0/badges/22420419",
+  },
 ];
 
 const CertificationsSection = () => (
