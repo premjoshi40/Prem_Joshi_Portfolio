@@ -17,8 +17,8 @@ const Index = () => {
       <SocialBar />
       <main className="lg:pl-20">
         <Hero />
-        <CertificationsSection />
         <ExperienceSection />
+        <CertificationsSection />
         <SkillsSection />
         <EducationSection />
         <ProjectsSection />
