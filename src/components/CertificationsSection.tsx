@@ -122,7 +122,7 @@ const certifications: Certification[] = [
 ];
 
 const CertificationCard = ({ cert }: { cert: Certification }) => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   const hasBadges = !!cert.badges?.length;
 
   return (
