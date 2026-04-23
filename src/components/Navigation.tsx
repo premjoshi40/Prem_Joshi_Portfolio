@@ -8,7 +8,7 @@ const Navigation = () => {
   const handleContactClick = () => {
     toast({
       title: "Contact Me",
-      description: "📧 Email: premjoshi40@gmail.com",
+      description: "📧 Email: premjoshi1504@gmail.com",
       duration: 5000,
     });
   };
