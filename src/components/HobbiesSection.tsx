@@ -15,7 +15,7 @@ const hobbies: Hobby[] = [
     org: "NYC Footy",
     logo: nycFootyLogo,
     description:
-      "Active player at NYC Footy — the nation's largest recreational soccer league.",
+      "Active player at NYC Footy — the nation's largest recreational soccer league. Leading as team captain since 2023.",
   },
 ];
 
