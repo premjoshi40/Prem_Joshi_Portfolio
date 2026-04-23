@@ -37,13 +37,13 @@ const honors: Honor[] = [
     description:
       "Seven-time Employee of the Month, recognized for leadership and execution across high-impact engineering initiatives.",
     highlights: [
-      "Bridged product and engineering to deliver scalable, user-centric solutions",
-      "Owned end-to-end feature delivery from development to launch",
-      "Drove data-informed decisions across product and technical priorities",
-      "Improved system performance while enhancing user experience",
-      "Accelerated delivery by aligning architecture with product goals",
-      "Collaborated cross-functionally to ship high-impact features",
-      "Proactively solved complex problems using both coding and product thinking",
+      "Bridged product and engineering to ship scalable solutions",
+      "Owned end-to-end feature delivery",
+      "Drove decisions using data and technical insight",
+      "Improved performance and user experience",
+      "Accelerated delivery through strong prioritization",
+      "Led cross-functional execution",
+      "Solved complex problems with product and coding expertise",
     ],
   },
 ];
