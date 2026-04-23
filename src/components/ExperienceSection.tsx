@@ -3,6 +3,7 @@ import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import eyLogo from "@/assets/ey-logo.webp";
 import mobiculeLogo from "@/assets/mobicule-logo.jpg";
+import ubLogo from "@/assets/ub-logo.webp";
 import Reveal from "@/components/Reveal";
 import RevealHeading from "@/components/RevealHeading";
 
@@ -31,6 +32,19 @@ const experiences: {
       "Led product discovery for EY's internal AI-powered risk automation tool; partnered with engineering teams to translate risk workflows into data requirements and AI-training specifications, authoring 10+ domain artifacts to accelerate model development.",
       "Owned compliance product roadmaps across 15+ clients (SOC2, ISO 27001, NIST); defined requirements and adoption strategy for Zscaler, Intune/Defender, Forescout, and SailPoint, leading teams of 5 members to achieve 100% certification success.",
       "Improved document search accuracy by 27% by owning quality-focused AI/ML product strategy for an LLM-powered RAG feature; defined evals with 4 ML engineers to optimize vector embeddings, retrieval latency, and inference cost.",
+    ],
+  },
+  {
+    role: "Research Assistant",
+    company: "University at Buffalo",
+    type: "Part-time",
+    period: "Aug 2021 — May 2022",
+    logo: "UB",
+    logoImage: ubLogo,
+    description: [
+      "Conducted graduate-level research at the University at Buffalo, contributing to data-driven studies and applied machine learning experiments under faculty mentorship.",
+      "Designed and ran empirical experiments, processed large datasets, and authored technical write-ups summarizing findings for academic review.",
+      "Collaborated with cross-disciplinary research teams to translate research questions into reproducible analyses and presentation-ready insights.",
     ],
   },
   {
