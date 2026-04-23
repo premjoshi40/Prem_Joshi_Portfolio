@@ -1,4 +1,4 @@
-import { Home, User, Award, Briefcase, Sparkles, GraduationCap, Package, Mail, Menu, X } from "lucide-react";
+import { Home, User, Award, Briefcase, Sparkles, GraduationCap, Package, Trophy, Heart, Mail, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
@@ -10,6 +10,8 @@ const items = [
   { id: "skills", label: "Skills", icon: Sparkles },
   { id: "education", label: "Education", icon: GraduationCap },
   { id: "products", label: "Projects", icon: Package },
+  { id: "honors", label: "Honors", icon: Trophy },
+  { id: "hobbies", label: "Hobbies", icon: Heart },
   { id: "contact", label: "Contact", icon: Mail },
 ];
 
