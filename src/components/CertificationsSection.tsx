@@ -124,18 +124,38 @@ const CertificationCard = ({ cert }: { cert: Certification }) => (
     href={cert.url}
     target="_blank"
     rel="noopener noreferrer"
-    className="group flex items-center gap-5 p-5 rounded-2xl bg-card border border-border hover:border-[hsl(var(--orange)/0.6)] hover:-translate-y-1 hover:shadow-[0_18px_40px_-15px_hsl(var(--orange)/0.4)] transition-all duration-500"
+    className="group relative flex items-center gap-5 p-5 rounded-2xl bg-card border border-border overflow-hidden hover:border-[hsl(var(--orange)/0.7)] hover:-translate-y-1.5 hover:shadow-[0_24px_60px_-18px_hsl(var(--orange)/0.55)] transition-all duration-500"
   >
-    <div className="w-20 h-20 flex-shrink-0 rounded-xl bg-muted/50 p-2 flex items-center justify-center transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3">
+    {/* Gradient sweep background on hover */}
+    <span
+      aria-hidden
+      className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+      style={{
+        background:
+          "radial-gradient(circle at 0% 50%, hsl(var(--orange)/0.18), transparent 60%)",
+      }}
+    />
+    {/* Shine sweep */}
+    <span
+      aria-hidden
+      className="pointer-events-none absolute -inset-y-2 -left-1/2 w-1/3 rotate-12 bg-gradient-to-r from-transparent via-white/15 to-transparent opacity-0 group-hover:opacity-100 group-hover:left-[120%] transition-all duration-[900ms] ease-out"
+    />
+    {/* Animated left accent bar */}
+    <span
+      aria-hidden
+      className="pointer-events-none absolute left-0 top-0 h-full w-[3px] bg-[hsl(var(--orange))] scale-y-0 group-hover:scale-y-100 origin-top transition-transform duration-500"
+    />
+
+    <div className="relative w-20 h-20 flex-shrink-0 rounded-xl bg-muted/50 p-2 flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:bg-muted/70 group-hover:shadow-[0_0_25px_-2px_hsl(var(--orange)/0.45)]">
       <img
         src={cert.image}
         alt={cert.title}
-        className="w-full h-full object-contain"
+        className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
         loading="lazy"
       />
     </div>
-    <div className="flex-1 min-w-0">
-      <h3 className="text-base lg:text-lg font-bold text-foreground leading-snug group-hover:text-[hsl(var(--orange))] transition-colors">
+    <div className="relative flex-1 min-w-0">
+      <h3 className="text-base lg:text-lg font-bold text-foreground leading-snug group-hover:text-[hsl(var(--orange))] transition-colors duration-300">
         {cert.title}
       </h3>
       <p className="text-sm text-muted-foreground mt-1">
@@ -146,7 +166,7 @@ const CertificationCard = ({ cert }: { cert: Certification }) => (
         Verify
         <ArrowUpRight
           size={14}
-          className="group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform duration-300"
+          className="transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
         />
       </span>
     </div>
