@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import RevealHeading from "@/components/RevealHeading";
+import fridgeImage from "@/assets/project-fridge.jpg";
+import auralisImage from "@/assets/project-auralis.jpg";
+import amuseImage from "@/assets/project-amuse.jpg";
 
 const projects = [
   {
@@ -10,7 +13,7 @@ const projects = [
     description:
       "Smart AI feedback for fridge organization — reduces food waste and maximizes freshness using computer vision and intelligent recommendations.",
     technologies: ["Computer Vision", "AI/ML", "React", "Cloud Functions"],
-    icon: "🧊",
+    image: fridgeImage,
     path: "/products/fridge-roaster",
     cta: "View Project",
   },
@@ -20,7 +23,7 @@ const projects = [
     description:
       "Intelligent AI chatbot revolutionizing document retrieval through natural language and semantic search. Projected up to 80% faster retrieval and 2× productivity gains.",
     technologies: ["LLMs", "RAG", "Semantic Search", "Vector DB", "React"],
-    icon: "💬",
+    image: auralisImage,
     path: "/products/auralis",
     cta: "View Project",
   },
@@ -30,7 +33,7 @@ const projects = [
     description:
       "AR/VR museum experience platform transforming how visitors interact with artifacts through immersive storytelling. Projected 3× higher engagement.",
     technologies: ["AR/VR", "3D", "Unity", "Product Strategy"],
-    icon: "🎨",
+    image: amuseImage,
     path: "/products/amuse",
     cta: "View Project",
   },
@@ -62,11 +65,16 @@ const ProjectsSection = () => {
                   <div className="pointer-events-none absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/15 to-transparent" />
                 </div>
 
-                {/* Image / icon area */}
-                <div className="relative aspect-[16/10] bg-muted/40 flex items-center justify-center text-7xl transition-transform duration-500 group-hover:scale-110">
-                  <span className="transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6 inline-block">
-                    {p.icon}
-                  </span>
+                {/* Image area */}
+                <div className="relative aspect-[16/10] bg-muted/40 overflow-hidden">
+                  <img
+                    src={p.image}
+                    alt={`${p.name} project preview`}
+                    loading="lazy"
+                    width={1024}
+                    height={640}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
                 </div>
 
                 <div className="relative p-5 flex-1 flex flex-col">

@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
+import fridgeImage from "@/assets/project-fridge.jpg";
 
 const FridgeRoaster = () => {
   return (
@@ -20,10 +21,16 @@ const FridgeRoaster = () => {
         <div className="space-y-12">
           {/* Header */}
           <div className="space-y-4">
-            <div className="flex items-center gap-4">
-              <span className="text-6xl">🧊</span>
-              <h1 className="text-5xl font-bold text-foreground">Fridge Analyzer</h1>
+            <div className="rounded-2xl overflow-hidden border border-border shadow-lg">
+              <img
+                src={fridgeImage}
+                alt="Fridge Analyzer project preview"
+                width={1024}
+                height={640}
+                className="w-full h-auto object-cover"
+              />
             </div>
+            <h1 className="text-5xl font-bold text-foreground">Fridge Analyzer</h1>
             <p className="text-xl text-muted-foreground">
               Smart AI Feedback for Fridge Organization — Reduce waste, maximize freshness
             </p>
