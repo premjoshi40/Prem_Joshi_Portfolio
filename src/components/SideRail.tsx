@@ -9,7 +9,7 @@ const items = [
   { id: "experience", label: "Experience", icon: Briefcase },
   { id: "skills", label: "Skills", icon: Sparkles },
   { id: "education", label: "Education", icon: GraduationCap },
-  { id: "products", label: "Projects", icon: Package },
+  { id: "products", label: "Products", icon: Package },
   { id: "technical-projects", label: "Technical Projects", icon: Code2 },
   { id: "honors", label: "Honors", icon: Trophy },
   { id: "hobbies", label: "Hobbies", icon: Heart },

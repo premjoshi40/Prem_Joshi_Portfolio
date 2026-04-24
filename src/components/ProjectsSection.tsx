@@ -43,7 +43,7 @@ const ProjectsSection = () => {
   return (
     <section id="products" className="py-24 px-6 lg:px-16 bg-background">
       <div className="container mx-auto max-w-6xl">
-        <RevealHeading title="Projects" />
+        <RevealHeading title="Products" />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {projects.map((p, idx) => {
