@@ -1,4 +1,5 @@
 import nycFootyLogo from "@/assets/nycfooty-logo.webp";
+import footballTactics from "@/assets/football-tactics.png";
 import Reveal from "@/components/Reveal";
 import RevealHeading from "@/components/RevealHeading";
 
@@ -16,6 +17,13 @@ const hobbies: Hobby[] = [
     logo: nycFootyLogo,
     description:
       "Active player at NYC Footy — the nation's largest recreational soccer league. Leading as team captain since 2023.",
+  },
+  {
+    title: "Armchair Tactician",
+    org: "The Beautiful Game",
+    logo: footballTactics,
+    description:
+      "Obsessive student of the game — dissecting formations, pressing triggers, and xG trends. From Pep's positional play to counter-press chaos, every match is a tactics masterclass waiting to be decoded.",
   },
 ];
 
