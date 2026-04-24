@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
+import auralisImage from "@/assets/project-auralis.jpg";
 
 const Auralis = () => {
   return (
@@ -20,10 +21,16 @@ const Auralis = () => {
         <div className="space-y-12">
           {/* Header */}
           <div className="space-y-4">
-            <div className="flex items-center gap-4">
-              <span className="text-6xl">💬</span>
-              <h1 className="text-5xl font-bold text-foreground">Auralis</h1>
+            <div className="rounded-2xl overflow-hidden border border-border shadow-lg">
+              <img
+                src={auralisImage}
+                alt="Auralis project preview"
+                width={1024}
+                height={640}
+                className="w-full h-auto object-cover"
+              />
             </div>
+            <h1 className="text-5xl font-bold text-foreground">Auralis</h1>
             <p className="text-xl text-muted-foreground">
               Intelligent AI Chatbot Platform
             </p>
