@@ -19,11 +19,11 @@ const hobbies: Hobby[] = [
       "Active player at NYC Footy — the nation's largest recreational soccer league. Leading as team captain since 2023.",
   },
   {
-    title: "Armchair Tactician",
+    title: "Soccer Analytics",
     org: "The Beautiful Game",
     logo: footballTactics,
     description:
-      "Obsessive student of the game — dissecting formations, pressing triggers, and xG trends. From Pep's positional play to counter-press chaos, every match is a tactics masterclass waiting to be decoded.",
+      "Passionate about soccer analytics, analyzing match tactics, player performance, and team strategies.",
   },
 ];
 
