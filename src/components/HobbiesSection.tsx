@@ -20,7 +20,7 @@ const hobbies: Hobby[] = [
   },
   {
     title: "Soccer Analytics",
-    org: "The Beautiful Game",
+    org: "",
     logo: footballTactics,
     description:
       "Passionate about soccer analytics, analyzing match tactics, player performance, and team strategies.",
@@ -46,7 +46,8 @@ const HobbiesSection = () => (
               </div>
               <div className="flex-1 min-w-0">
                 <h3 className="text-base lg:text-lg font-bold text-foreground leading-snug group-hover:text-[hsl(var(--orange))] transition-colors">
-                  {hobby.title} <span className="text-muted-foreground font-normal">@ {hobby.org}</span>
+                  {hobby.title}
+                  {hobby.org && <span className="text-muted-foreground font-normal"> @ {hobby.org}</span>}
                 </h3>
                 <p className="text-sm text-foreground/80 mt-2 leading-relaxed">
                   {hobby.description}
