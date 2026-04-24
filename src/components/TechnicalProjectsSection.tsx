@@ -5,7 +5,7 @@ import neuralImage from "@/assets/project-neural-network.png";
 
 const techProjects = [
   {
-    name: "Neural Network from Scratch",
+    name: "Neural Network",
     date: "2024",
     description:
       "A small neural network built from scratch to explore the fundamentals of deep learning — forward pass, backpropagation, and gradient descent — implemented with NumPy and PyTorch.",
