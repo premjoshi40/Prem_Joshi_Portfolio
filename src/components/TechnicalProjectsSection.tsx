@@ -1,7 +1,7 @@
 import { Github } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import RevealHeading from "@/components/RevealHeading";
-import neuralImage from "@/assets/project-neural-network.jpg";
+import neuralImage from "@/assets/project-neural-network.png";
 
 const techProjects = [
   {
