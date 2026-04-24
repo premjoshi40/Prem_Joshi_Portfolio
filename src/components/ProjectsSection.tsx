@@ -32,7 +32,7 @@ const projects = [
     date: "2023",
     description:
       "AR/VR museum experience platform transforming how visitors interact with artifacts through immersive storytelling. Projected 3× higher engagement.",
-    technologies: ["AR/VR", "3D", "Unity", "Product Strategy"],
+    technologies: ["AR/VR", "3D", "Unity"],
     image: amuseImage,
     path: "/products/amuse",
     cta: "View Project",
