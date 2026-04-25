@@ -24,13 +24,13 @@ const Auralis = () => {
             <div className="rounded-2xl overflow-hidden border border-border shadow-lg">
               <img
                 src={auralisImage}
-                alt="Auralis project preview"
+                alt="RAG Chat Bot project preview"
                 width={1024}
                 height={640}
                 className="w-full h-auto object-cover"
               />
             </div>
-            <h1 className="text-5xl font-bold text-foreground">Auralis</h1>
+            <h1 className="text-5xl font-bold text-foreground">RAG Chat Bot</h1>
             <p className="text-xl text-muted-foreground">
               Intelligent AI Chatbot Platform
             </p>
@@ -51,7 +51,7 @@ const Auralis = () => {
           <section className="space-y-4">
             <h2 className="text-3xl font-bold text-foreground">Background</h2>
             <p className="text-foreground/80 leading-relaxed">
-              Auralis is a responsive web application that leverages AI to store, search, and retrieve documents using natural language.
+              RAG Chat Bot is a responsive web application that leverages AI to store, search, and retrieve documents using natural language.
             </p>
           </section>
 
@@ -59,7 +59,7 @@ const Auralis = () => {
           <section className="space-y-4">
             <h2 className="text-3xl font-bold text-foreground">Project Overview</h2>
             <p className="text-foreground/80 leading-relaxed">
-              Auralis enables users to upload PDFs, images, and docs, then retrieve them conversationally through an AI chatbot interface.
+              RAG Chat Bot enables users to upload PDFs, images, and docs, then retrieve them conversationally through an AI chatbot interface.
             </p>
             <div className="bg-card border border-border rounded-lg p-6 space-y-3">
               <h4 className="font-semibold text-foreground">Two distinct access modes:</h4>
