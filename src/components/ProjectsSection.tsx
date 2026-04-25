@@ -18,7 +18,7 @@ const projects = [
     cta: "View Project",
   },
   {
-    name: "Auralis",
+    name: "RAG Chat Bot",
     date: "2023",
     description:
       "Intelligent AI chatbot revolutionizing document retrieval through natural language and semantic search. Projected up to 80% faster retrieval and 2× productivity gains.",

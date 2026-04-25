@@ -29,7 +29,7 @@ const ProductsModal = ({ open, onOpenChange }: ProductsModalProps) => {
       icon: "🎨",
     },
     {
-      name: "Auralis",
+      name: "RAG Chat Bot",
       description: "Intelligent AI chatbot for seamless conversations and support",
       path: "/products/auralis",
       gradient: "from-blue-500 to-cyan-500",
