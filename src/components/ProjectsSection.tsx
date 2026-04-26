@@ -5,6 +5,7 @@ import fridgeImage from "@/assets/project-fridge.jpg";
 import auralisImage from "@/assets/project-auralis.jpg";
 import amuseImage from "@/assets/project-amuse.jpg";
 import neuralImage from "@/assets/project-neural-network.png";
+import nlpImage from "@/assets/nlp-project.png";
 
 type Project = {
   name: string;
@@ -56,6 +57,16 @@ const projects: Project[] = [
     technologies: ["Python", "NumPy", "PyTorch", "Deep Learning"],
     image: neuralImage,
     repo: "https://github.com/premjoshi40/neural_network",
+    cta: "View on GitHub",
+  },
+  {
+    name: "NLP Text Analyzer",
+    date: "2025",
+    description:
+      "A text analysis app that cleans and preprocesses text (removing stopwords, URLs, etc.), runs sentiment analysis, classifies content into categories like technology, sports, business, health, and entertainment, and surfaces word frequency stats.",
+    technologies: ["Python", "NLP", "Transformers", "Hugging Face", "Sentiment Analysis"],
+    image: nlpImage,
+    repo: "https://github.com/premjoshi40",
     cta: "View on GitHub",
   },
 ];
