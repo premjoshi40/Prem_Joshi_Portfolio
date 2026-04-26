@@ -66,7 +66,7 @@ const projects: Project[] = [
       "A text analysis app that cleans and preprocesses text (removing stopwords, URLs, etc.), runs sentiment analysis, classifies content into categories like technology, sports, business, health, and entertainment, and surfaces word frequency stats.",
     technologies: ["Python", "NLP", "Transformers", "Hugging Face", "Sentiment Analysis"],
     image: nlpImage,
-    repo: "https://github.com/premjoshi40",
+    repo: "https://github.com/premjoshi40/nlp_project",
     cta: "View on GitHub",
   },
 ];
