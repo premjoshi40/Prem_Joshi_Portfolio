@@ -5,6 +5,7 @@ import fridgeImage from "@/assets/project-fridge.jpg";
 import auralisImage from "@/assets/project-auralis.jpg";
 import amuseImage from "@/assets/project-amuse.jpg";
 import neuralImage from "@/assets/project-neural-network.png";
+import nlpImage from "@/assets/nlp-project.png";
 
 type Project = {
   name: string;
