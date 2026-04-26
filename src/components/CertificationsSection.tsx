@@ -33,7 +33,7 @@ const certifications: Certification[] = [
   {
     title: "AWS Certified Cloud Practitioner",
     image: awsCloudPractitioner,
-    issued: "2025",
+    issued: "2024",
     credentialId: "c46d4343-f34c-46b6-9c9a-f925d47ddb4e",
     url: "https://www.credly.com/badges/c46d4343-f34c-46b6-9c9a-f925d47ddb4e/public_url",
   },
