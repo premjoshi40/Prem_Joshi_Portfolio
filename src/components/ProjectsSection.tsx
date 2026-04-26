@@ -133,7 +133,7 @@ const ProjectCard = ({ p }: { p: Project }) => {
     </article>
   );
 
-  const wrapperClass = "block h-full w-[320px] sm:w-[360px] lg:w-[400px] flex-shrink-0";
+  const wrapperClass = "block h-[560px] w-[320px] sm:w-[360px] lg:w-[400px] flex-shrink-0";
 
   if (p.path) {
     return (
@@ -173,7 +173,7 @@ const ProjectsSection = () => {
         <div className="pointer-events-none absolute inset-y-0 right-0 w-16 z-10 bg-gradient-to-l from-background to-transparent" />
 
         <div className="overflow-hidden">
-          <div className="flex gap-5 w-max animate-scroll-left group-hover:[animation-play-state:paused] py-4 px-6">
+          <div className="flex items-stretch gap-5 w-max animate-scroll-left group-hover:[animation-play-state:paused] py-4 px-6">
             {loop.map((p, idx) => (
               <ProjectCard key={`${p.name}-${idx}`} p={p} />
             ))}
