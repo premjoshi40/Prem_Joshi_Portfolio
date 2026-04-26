@@ -105,15 +105,19 @@ const ProjectCard = ({ p }: { p: Project }) => {
       </div>
 
       <div className="relative p-5 flex-1 flex flex-col">
-        <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-2">
-          Date: <span className="text-foreground font-medium normal-case">{p.date}</span>
-        </p>
         <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-3">
-          Technologies:{" "}
-          <span className="text-foreground font-medium normal-case">
-            {p.technologies.join(", ")}
-          </span>
+          Technologies
         </p>
+        <div className="flex flex-wrap gap-2 mb-4 min-h-[3.5rem] content-start">
+          {p.technologies.map((tech) => (
+            <span
+              key={tech}
+              className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-muted text-foreground/80 border border-border"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
         <p className="text-sm text-foreground/80 leading-relaxed mb-5 flex-1">
           {p.description}
         </p>

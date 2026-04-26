@@ -144,7 +144,7 @@ export default {
         "pulse-scale": "pulse-scale 2s ease-in-out infinite",
         "shimmer": "shimmer 3s linear infinite",
         "bounce-subtle": "bounce-subtle 2s ease-in-out infinite",
-        "scroll-left": "scroll-left 20s linear infinite",
+        "scroll-left": "scroll-left 60s linear infinite",
         "scroll-right": "scroll-right 25s linear infinite"
       },
     },
