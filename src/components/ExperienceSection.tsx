@@ -73,7 +73,7 @@ const experiences: {
 ];
 
 const ExperienceSection = () => {
-  const [open, setOpen] = useState<number | null>(0);
+  const [open, setOpen] = useState<number | null>(null);
 
   return (
     <section id="experience" className="py-24 px-6 lg:px-16 bg-muted/40">
